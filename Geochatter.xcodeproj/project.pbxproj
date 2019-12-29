@@ -1,0 +1,499 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		339A24F698DD0D2CD5A09111 /* Pods_Geochatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB35E617304A4B2CD105F683 /* Pods_Geochatter.framework */; };
+		EC05AD8523B85A1A006A8473 /* AppToolbarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC05AD8423B85A1A006A8473 /* AppToolbarDelegate.swift */; };
+		EC05AD8823B85B0B006A8473 /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC05AD8723B85B0B006A8473 /* Bubble.swift */; };
+		EC05AD8A23B85D0D006A8473 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC05AD8923B85D0D006A8473 /* FirebaseService.swift */; };
+		EC20805923B83BE70074B9C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC20805823B83BE70074B9C2 /* GoogleService-Info.plist */; };
+		EC20805B23B83C7E0074B9C2 /* AppToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC20805A23B83C7E0074B9C2 /* AppToolbar.xib */; };
+		EC20805D23B83CDA0074B9C2 /* AppToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC20805C23B83CDA0074B9C2 /* AppToolbar.swift */; };
+		EC385D6723B82CD600EFFD76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC385D6623B82CD600EFFD76 /* AppDelegate.swift */; };
+		EC385D6923B82CD600EFFD76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC385D6823B82CD600EFFD76 /* SceneDelegate.swift */; };
+		EC385D6B23B82CD600EFFD76 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC385D6A23B82CD600EFFD76 /* MainViewController.swift */; };
+		EC385D6E23B82CD600EFFD76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC385D6C23B82CD600EFFD76 /* Main.storyboard */; };
+		EC385D7023B82CD800EFFD76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC385D6F23B82CD800EFFD76 /* Assets.xcassets */; };
+		EC8C4A1F23B835FE00C0D208 /* GlobalColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8C4A1E23B835FE00C0D208 /* GlobalColors.swift */; };
+		ECE05CDF23B83A20005974C4 /* GlobalKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECE05CDE23B83A20005974C4 /* GlobalKeys.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C54102AAFF72773E4E1B1D4C /* Pods-Geochatter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geochatter.debug.xcconfig"; path = "Target Support Files/Pods-Geochatter/Pods-Geochatter.debug.xcconfig"; sourceTree = "<group>"; };
+		DB35E617304A4B2CD105F683 /* Pods_Geochatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geochatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC05AD8423B85A1A006A8473 /* AppToolbarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppToolbarDelegate.swift; sourceTree = "<group>"; };
+		EC05AD8723B85B0B006A8473 /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
+		EC05AD8923B85D0D006A8473 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		EC20805823B83BE70074B9C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EC20805A23B83C7E0074B9C2 /* AppToolbar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppToolbar.xib; sourceTree = "<group>"; };
+		EC20805C23B83CDA0074B9C2 /* AppToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppToolbar.swift; sourceTree = "<group>"; };
+		EC385D6323B82CD600EFFD76 /* Geochatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geochatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC385D6623B82CD600EFFD76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC385D6823B82CD600EFFD76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EC385D6A23B82CD600EFFD76 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EC385D6D23B82CD600EFFD76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC385D6F23B82CD800EFFD76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC385D7423B82CD800EFFD76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC8C4A1E23B835FE00C0D208 /* GlobalColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalColors.swift; sourceTree = "<group>"; };
+		ECE05CDE23B83A20005974C4 /* GlobalKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GlobalKeys.plist; sourceTree = "<group>"; };
+		F89E5F669ADC07B6C3E8B65C /* Pods-Geochatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geochatter.release.xcconfig"; path = "Target Support Files/Pods-Geochatter/Pods-Geochatter.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC385D6023B82CD600EFFD76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				339A24F698DD0D2CD5A09111 /* Pods_Geochatter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		41D363FC0EBE717ADD045812 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C54102AAFF72773E4E1B1D4C /* Pods-Geochatter.debug.xcconfig */,
+				F89E5F669ADC07B6C3E8B65C /* Pods-Geochatter.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DC0FE9ED685943CF991E3F40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB35E617304A4B2CD105F683 /* Pods_Geochatter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC05AD8623B85AFE006A8473 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EC05AD8723B85B0B006A8473 /* Bubble.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EC20805E23B83CE10074B9C2 /* Toolbar */ = {
+			isa = PBXGroup;
+			children = (
+				EC20805C23B83CDA0074B9C2 /* AppToolbar.swift */,
+				EC20805A23B83C7E0074B9C2 /* AppToolbar.xib */,
+				EC05AD8423B85A1A006A8473 /* AppToolbarDelegate.swift */,
+			);
+			path = Toolbar;
+			sourceTree = "<group>";
+		};
+		EC385D5A23B82CD600EFFD76 = {
+			isa = PBXGroup;
+			children = (
+				EC385D6523B82CD600EFFD76 /* Geochatter */,
+				EC385D6423B82CD600EFFD76 /* Products */,
+				41D363FC0EBE717ADD045812 /* Pods */,
+				DC0FE9ED685943CF991E3F40 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EC385D6423B82CD600EFFD76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC385D6323B82CD600EFFD76 /* Geochatter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC385D6523B82CD600EFFD76 /* Geochatter */ = {
+			isa = PBXGroup;
+			children = (
+				EC8C4A1A23B830FA00C0D208 /* Application Control */,
+				EC385D6F23B82CD800EFFD76 /* Assets.xcassets */,
+				EC05AD8923B85D0D006A8473 /* FirebaseService.swift */,
+				EC8C4A1D23B835E900C0D208 /* Global Config */,
+				EC20805823B83BE70074B9C2 /* GoogleService-Info.plist */,
+				EC385D7423B82CD800EFFD76 /* Info.plist */,
+				EC05AD8623B85AFE006A8473 /* Models */,
+				EC8C4A1B23B8310500C0D208 /* View Controllers */,
+				EC8C4A1C23B8310D00C0D208 /* Views */,
+			);
+			path = Geochatter;
+			sourceTree = "<group>";
+		};
+		EC8C4A1A23B830FA00C0D208 /* Application Control */ = {
+			isa = PBXGroup;
+			children = (
+				EC385D6623B82CD600EFFD76 /* AppDelegate.swift */,
+				EC385D6823B82CD600EFFD76 /* SceneDelegate.swift */,
+			);
+			path = "Application Control";
+			sourceTree = "<group>";
+		};
+		EC8C4A1B23B8310500C0D208 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EC385D6A23B82CD600EFFD76 /* MainViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		EC8C4A1C23B8310D00C0D208 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EC20805E23B83CE10074B9C2 /* Toolbar */,
+				EC385D6C23B82CD600EFFD76 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EC8C4A1D23B835E900C0D208 /* Global Config */ = {
+			isa = PBXGroup;
+			children = (
+				EC8C4A1E23B835FE00C0D208 /* GlobalColors.swift */,
+				ECE05CDE23B83A20005974C4 /* GlobalKeys.plist */,
+			);
+			path = "Global Config";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC385D6223B82CD600EFFD76 /* Geochatter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC385D7723B82CD800EFFD76 /* Build configuration list for PBXNativeTarget "Geochatter" */;
+			buildPhases = (
+				1D8F086C56D8859CC9A661AB /* [CP] Check Pods Manifest.lock */,
+				EC385D5F23B82CD600EFFD76 /* Sources */,
+				EC385D6023B82CD600EFFD76 /* Frameworks */,
+				EC385D6123B82CD600EFFD76 /* Resources */,
+				EC8C4A1923B830B400C0D208 /* ShellScript */,
+				8C1EACC8DA2C04976CF23E97 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Geochatter;
+			productName = geochatter;
+			productReference = EC385D6323B82CD600EFFD76 /* Geochatter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC385D5B23B82CD600EFFD76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Jeriel Ng";
+				TargetAttributes = {
+					EC385D6223B82CD600EFFD76 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = EC385D5E23B82CD600EFFD76 /* Build configuration list for PBXProject "Geochatter" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC385D5A23B82CD600EFFD76;
+			productRefGroup = EC385D6423B82CD600EFFD76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC385D6223B82CD600EFFD76 /* Geochatter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC385D6123B82CD600EFFD76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC20805B23B83C7E0074B9C2 /* AppToolbar.xib in Resources */,
+				EC385D7023B82CD800EFFD76 /* Assets.xcassets in Resources */,
+				EC20805923B83BE70074B9C2 /* GoogleService-Info.plist in Resources */,
+				ECE05CDF23B83A20005974C4 /* GlobalKeys.plist in Resources */,
+				EC385D6E23B82CD600EFFD76 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D8F086C56D8859CC9A661AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Geochatter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C1EACC8DA2C04976CF23E97 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Geochatter/Pods-Geochatter-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Geochatter/Pods-Geochatter-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Geochatter/Pods-Geochatter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC8C4A1923B830B400C0D208 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftlint autocorrect\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC385D5F23B82CD600EFFD76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC05AD8523B85A1A006A8473 /* AppToolbarDelegate.swift in Sources */,
+				EC20805D23B83CDA0074B9C2 /* AppToolbar.swift in Sources */,
+				EC05AD8A23B85D0D006A8473 /* FirebaseService.swift in Sources */,
+				EC8C4A1F23B835FE00C0D208 /* GlobalColors.swift in Sources */,
+				EC385D6B23B82CD600EFFD76 /* MainViewController.swift in Sources */,
+				EC05AD8823B85B0B006A8473 /* Bubble.swift in Sources */,
+				EC385D6723B82CD600EFFD76 /* AppDelegate.swift in Sources */,
+				EC385D6923B82CD600EFFD76 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EC385D6C23B82CD600EFFD76 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC385D6D23B82CD600EFFD76 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC385D7523B82CD800EFFD76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC385D7623B82CD800EFFD76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC385D7823B82CD800EFFD76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C54102AAFF72773E4E1B1D4C /* Pods-Geochatter.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J4D9K2HZLJ;
+				INFOPLIST_FILE = geochatter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jerielng.geochatter;
+				PRODUCT_NAME = Geochatter;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC385D7923B82CD800EFFD76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F89E5F669ADC07B6C3E8B65C /* Pods-Geochatter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J4D9K2HZLJ;
+				INFOPLIST_FILE = geochatter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jerielng.geochatter;
+				PRODUCT_NAME = Geochatter;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC385D5E23B82CD600EFFD76 /* Build configuration list for PBXProject "Geochatter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC385D7523B82CD800EFFD76 /* Debug */,
+				EC385D7623B82CD800EFFD76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC385D7723B82CD800EFFD76 /* Build configuration list for PBXNativeTarget "Geochatter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC385D7823B82CD800EFFD76 /* Debug */,
+				EC385D7923B82CD800EFFD76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC385D5B23B82CD600EFFD76 /* Project object */;
+}
