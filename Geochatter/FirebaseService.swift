@@ -6,8 +6,7 @@
 //  Copyright © 2019 Jeriel Ng. All rights reserved.
 //
 
-import Foundation
+import Firebase
 
 class FirebaseService {
-    
 }

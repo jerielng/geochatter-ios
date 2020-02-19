@@ -11,14 +11,14 @@ import MapKit
 
 // MARK: - UIViewController
 class MainViewController: UIViewController {
-    @IBOutlet var chatCollectionView: UICollectionView!
-    @IBOutlet var mapView: MKMapView!
+    @IBOutlet weak var chatTableView: UITableView!
+    @IBOutlet weak var mapView: MKMapView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = GlobalColors.appBackgroundColor
         mapView.showsUserLocation = true
-        chatCollectionView.backgroundColor = GlobalColors.tableViewCellColor
+        chatTableView.backgroundColor = GlobalColors.tableViewCellColor
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +39,5 @@ extension MainViewController: MKMapViewDelegate {
 }
 
 // MARK: - UICollectionViewDelegate
-extension MainViewController: UICollectionViewDelegate {
-    
+extension MainViewController: UITableViewDelegate {
 }

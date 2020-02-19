@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,46 +18,42 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HF5-uq-Vyp">
                                 <rect key="frame" x="0.0" y="44" width="414" height="438"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="438" id="e1p-n7-UIP"/>
+                                    <constraint firstAttribute="height" constant="438" id="Ihb-48-xMs"/>
                                 </constraints>
                             </mapView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4YS-Ne-lda">
-                                <rect key="frame" x="0.0" y="490" width="414" height="372"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Yf-Ck-dqv">
+                                <rect key="frame" x="0.0" y="482" width="414" height="362"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="372" id="Qef-pk-V5c"/>
+                                    <constraint firstAttribute="height" constant="362" id="Mm2-KR-tvi"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bvS-Tp-t2C">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="EjR-lp-Kgj">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3lt-s9-ZXc">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tN1-bA-rZ0" customClass="MainNavigationBar" customModule="Geochatter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="BR7-AI-MyP">
+                                        <barButtonItem key="rightBarButtonItem" title="+" id="qH2-nw-rlz"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="HF5-uq-Vyp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4zO-PT-zt2"/>
+                            <constraint firstItem="tN1-bA-rZ0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7qI-52-dts"/>
+                            <constraint firstItem="tN1-bA-rZ0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DXr-l3-Ykj"/>
+                            <constraint firstItem="8Yf-Ck-dqv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DzL-Lg-EGJ"/>
+                            <constraint firstItem="8Yf-Ck-dqv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MxR-uw-9kU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HF5-uq-Vyp" secondAttribute="trailing" id="T6J-hL-wYv"/>
                             <constraint firstItem="HF5-uq-Vyp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Yug-RW-fax"/>
-                            <constraint firstItem="4YS-Ne-lda" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lcN-Xe-sMy"/>
-                            <constraint firstItem="4YS-Ne-lda" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vOr-YV-rZ5"/>
-                            <constraint firstItem="4YS-Ne-lda" firstAttribute="top" secondItem="HF5-uq-Vyp" secondAttribute="bottom" constant="8" symbolic="YES" id="yTK-JS-r98"/>
+                            <constraint firstItem="HF5-uq-Vyp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fBF-UI-npf"/>
+                            <constraint firstItem="8Yf-Ck-dqv" firstAttribute="top" secondItem="HF5-uq-Vyp" secondAttribute="bottom" id="kRT-sW-Nbm"/>
+                            <constraint firstItem="tN1-bA-rZ0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zfL-Cp-lLc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="chatCollectionView" destination="4YS-Ne-lda" id="aNp-r1-NqM"/>
+                        <outlet property="chatTableView" destination="8Yf-Ck-dqv" id="3ie-xn-cdv"/>
                         <outlet property="mapView" destination="HF5-uq-Vyp" id="p03-vZ-cbl"/>
                     </connections>
                 </viewController>

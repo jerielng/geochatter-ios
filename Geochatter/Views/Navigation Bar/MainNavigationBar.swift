@@ -1,5 +1,5 @@
 //
-//  AppToolbar.swift
+//  MainNavigationBar.swift
 //  Geochatter
 //
 //  Created by Jeriel Ng on 12/28/19.
@@ -8,11 +8,10 @@
 
 import UIKit
 
-class AppToolbar: UIToolbar {
-    
+class MainNavigationBar: UINavigationBar {
     @IBOutlet weak var addBubbleButton: UIBarButtonItem!
-//    weak override var delegate: AppToolbarDelegate?
-    
+//    weak override var delegate: MainNavigationBarDelegate?
+
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -20,5 +19,4 @@ class AppToolbar: UIToolbar {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    
 }
