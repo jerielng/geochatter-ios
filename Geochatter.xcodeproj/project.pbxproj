@@ -15,6 +15,7 @@
 		EC20805923B83BE70074B9C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC20805823B83BE70074B9C2 /* GoogleService-Info.plist */; };
 		EC2BC38C2416001100F1269B /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2BC38B2416001100F1269B /* NavigationController.swift */; };
 		EC2BC38F2416038C00F1269B /* BubbleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2BC38E2416038C00F1269B /* BubbleManager.swift */; };
+		EC2BC3912416057700F1269B /* BubbleFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2BC3902416057700F1269B /* BubbleFormViewController.swift */; };
 		EC2C7A642415F0DF0062B790 /* GlobalStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C7A632415F0DF0062B790 /* GlobalStrings.swift */; };
 		EC385D6723B82CD600EFFD76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC385D6623B82CD600EFFD76 /* AppDelegate.swift */; };
 		EC385D6923B82CD600EFFD76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC385D6823B82CD600EFFD76 /* SceneDelegate.swift */; };
@@ -35,6 +36,7 @@
 		EC20805823B83BE70074B9C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EC2BC38B2416001100F1269B /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		EC2BC38E2416038C00F1269B /* BubbleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleManager.swift; sourceTree = "<group>"; };
+		EC2BC3902416057700F1269B /* BubbleFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleFormViewController.swift; sourceTree = "<group>"; };
 		EC2C7A632415F0DF0062B790 /* GlobalStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalStrings.swift; sourceTree = "<group>"; };
 		EC385D6323B82CD600EFFD76 /* Geochatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geochatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC385D6623B82CD600EFFD76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -133,8 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				EC385D6623B82CD600EFFD76 /* AppDelegate.swift */,
-				EC385D6823B82CD600EFFD76 /* SceneDelegate.swift */,
 				EC2BC38B2416001100F1269B /* NavigationController.swift */,
+				EC385D6823B82CD600EFFD76 /* SceneDelegate.swift */,
 			);
 			path = "Application Control";
 			sourceTree = "<group>";
@@ -142,6 +144,7 @@
 		EC8C4A1B23B8310500C0D208 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EC2BC3902416057700F1269B /* BubbleFormViewController.swift */,
 				EC385D6A23B82CD600EFFD76 /* MainViewController.swift */,
 			);
 			path = "View Controllers";
@@ -304,6 +307,7 @@
 				EC05AD8A23B85D0D006A8473 /* FirebaseService.swift in Sources */,
 				EC8C4A1F23B835FE00C0D208 /* GlobalColors.swift in Sources */,
 				EC385D6B23B82CD600EFFD76 /* MainViewController.swift in Sources */,
+				EC2BC3912416057700F1269B /* BubbleFormViewController.swift in Sources */,
 				EC2C7A642415F0DF0062B790 /* GlobalStrings.swift in Sources */,
 				EC05AD8823B85B0B006A8473 /* Bubble.swift in Sources */,
 				EC385D6723B82CD600EFFD76 /* AppDelegate.swift in Sources */,
@@ -457,7 +461,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jerielng.geochatter;
 				PRODUCT_NAME = Geochatter;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -476,7 +480,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jerielng.geochatter;
 				PRODUCT_NAME = Geochatter;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -8,5 +8,16 @@
 
 import UIKit
 
-class BubbleCell: UIView {
+class BubbleCell: UITableViewCell {
+    var userImage: UIImageView!
+    var userNameText: UITextView!
+    var userContentText: UITextView!
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
 }

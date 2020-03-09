@@ -14,6 +14,5 @@ class BubbleManager: NSObject {
 
     @objc
     func createNewBubble() {
-        print("Hello")
     }
 }

@@ -20,8 +20,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = GlobalColors.appBackgroundColor
-        mapView.showsUserLocation = true
-        chatTableView.backgroundColor = GlobalColors.tableViewCellColor
+        setUpMapView()
+        setUpTableView()
         setUpNavBar()
     }
 
@@ -32,8 +32,16 @@ class MainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
+    
+    private func setUpMapView() {
+        mapView.showsUserLocation = true
+    }
+    
+    private func setUpTableView() {
+        chatTableView.backgroundColor = GlobalColors.tableViewCellColor
+    }
 
-    func setUpNavBar() {
+    private func setUpNavBar() {
         guard let navBarItem = navBar.topItem else { return }
         navBar.backgroundColor = GlobalColors.tableViewCellColor
         navBarItem.title = GlobalStrings.mainVCTitle
