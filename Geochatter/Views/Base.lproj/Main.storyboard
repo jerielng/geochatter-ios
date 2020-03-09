@@ -28,12 +28,10 @@
                                     <constraint firstAttribute="height" constant="362" id="Mm2-KR-tvi"/>
                                 </constraints>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tN1-bA-rZ0" customClass="MainNavigationBar" customModule="Geochatter" customModuleProvider="target">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tN1-bA-rZ0" userLabel="Navigation Bar">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="BR7-AI-MyP">
-                                        <barButtonItem key="rightBarButtonItem" title="+" id="qH2-nw-rlz"/>
-                                    </navigationItem>
+                                    <navigationItem title="Title" id="cmh-8M-hmU"/>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -55,6 +53,7 @@
                     <connections>
                         <outlet property="chatTableView" destination="8Yf-Ck-dqv" id="3ie-xn-cdv"/>
                         <outlet property="mapView" destination="HF5-uq-Vyp" id="p03-vZ-cbl"/>
+                        <outlet property="navBar" destination="tN1-bA-rZ0" id="QQ5-sO-Qs9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -13,12 +13,16 @@ import MapKit
 class MainViewController: UIViewController {
     @IBOutlet weak var chatTableView: UITableView!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var navBar: UINavigationBar!
+
+    let bubbleManager = BubbleManager.sharedInstance
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = GlobalColors.appBackgroundColor
         mapView.showsUserLocation = true
         chatTableView.backgroundColor = GlobalColors.tableViewCellColor
+        setUpNavBar()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -27,6 +31,13 @@ class MainViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+    }
+
+    func setUpNavBar() {
+        guard let navBarItem = navBar.topItem else { return }
+        navBar.backgroundColor = GlobalColors.tableViewCellColor
+        navBarItem.title = GlobalStrings.mainVCTitle
+        navBarItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(bubbleManager.createNewBubble))
     }
 }
 
@@ -38,6 +49,6 @@ extension MainViewController: MKMapViewDelegate {
     }
 }
 
-// MARK: - UICollectionViewDelegate
+// MARK: - UITableViewDelegate
 extension MainViewController: UITableViewDelegate {
 }
