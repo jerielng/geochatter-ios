@@ -20,8 +20,9 @@
 		EC385D6723B82CD600EFFD76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC385D6623B82CD600EFFD76 /* AppDelegate.swift */; };
 		EC385D6923B82CD600EFFD76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC385D6823B82CD600EFFD76 /* SceneDelegate.swift */; };
 		EC385D6B23B82CD600EFFD76 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC385D6A23B82CD600EFFD76 /* MainViewController.swift */; };
-		EC385D6E23B82CD600EFFD76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC385D6C23B82CD600EFFD76 /* Main.storyboard */; };
 		EC385D7023B82CD800EFFD76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC385D6F23B82CD800EFFD76 /* Assets.xcassets */; };
+		EC549D9E242598AB003CAF0A /* BubbleFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC549D9D242598AB003CAF0A /* BubbleFormViewController.xib */; };
+		EC549DA0242598BA003CAF0A /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC549D9F242598BA003CAF0A /* MainViewController.xib */; };
 		EC8C4A1F23B835FE00C0D208 /* GlobalColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8C4A1E23B835FE00C0D208 /* GlobalColors.swift */; };
 		ECE05CDF23B83A20005974C4 /* GlobalKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECE05CDE23B83A20005974C4 /* GlobalKeys.plist */; };
 /* End PBXBuildFile section */
@@ -42,9 +43,10 @@
 		EC385D6623B82CD600EFFD76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC385D6823B82CD600EFFD76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EC385D6A23B82CD600EFFD76 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		EC385D6D23B82CD600EFFD76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC385D6F23B82CD800EFFD76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC385D7423B82CD800EFFD76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC549D9D242598AB003CAF0A /* BubbleFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BubbleFormViewController.xib; sourceTree = "<group>"; };
+		EC549D9F242598BA003CAF0A /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		EC8C4A1E23B835FE00C0D208 /* GlobalColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalColors.swift; sourceTree = "<group>"; };
 		ECE05CDE23B83A20005974C4 /* GlobalKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GlobalKeys.plist; sourceTree = "<group>"; };
 		F89E5F669ADC07B6C3E8B65C /* Pods-Geochatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geochatter.release.xcconfig"; path = "Target Support Files/Pods-Geochatter/Pods-Geochatter.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,15 +122,25 @@
 			children = (
 				EC8C4A1A23B830FA00C0D208 /* Application Control */,
 				EC385D6F23B82CD800EFFD76 /* Assets.xcassets */,
-				EC2BC38D2416037800F1269B /* Utilities */,
 				EC8C4A1D23B835E900C0D208 /* Global Config */,
 				EC20805823B83BE70074B9C2 /* GoogleService-Info.plist */,
 				EC385D7423B82CD800EFFD76 /* Info.plist */,
+				EC549D9C24259877003CAF0A /* Layouts */,
 				EC05AD8623B85AFE006A8473 /* Models */,
+				EC2BC38D2416037800F1269B /* Utilities */,
 				EC8C4A1B23B8310500C0D208 /* View Controllers */,
 				EC8C4A1C23B8310D00C0D208 /* Views */,
 			);
 			path = Geochatter;
+			sourceTree = "<group>";
+		};
+		EC549D9C24259877003CAF0A /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				EC549D9D242598AB003CAF0A /* BubbleFormViewController.xib */,
+				EC549D9F242598BA003CAF0A /* MainViewController.xib */,
+			);
+			path = Layouts;
 			sourceTree = "<group>";
 		};
 		EC8C4A1A23B830FA00C0D208 /* Application Control */ = {
@@ -154,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				EC1467EF240A1756006B350D /* BubbleCell.swift */,
-				EC385D6C23B82CD600EFFD76 /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -230,10 +241,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC549D9E242598AB003CAF0A /* BubbleFormViewController.xib in Resources */,
+				EC549DA0242598BA003CAF0A /* MainViewController.xib in Resources */,
 				EC385D7023B82CD800EFFD76 /* Assets.xcassets in Resources */,
 				EC20805923B83BE70074B9C2 /* GoogleService-Info.plist in Resources */,
 				ECE05CDF23B83A20005974C4 /* GlobalKeys.plist in Resources */,
-				EC385D6E23B82CD600EFFD76 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,17 +331,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		EC385D6C23B82CD600EFFD76 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EC385D6D23B82CD600EFFD76 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EC385D7523B82CD800EFFD76 /* Debug */ = {

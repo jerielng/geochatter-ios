@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Geochatter" customModuleProvider="target">
+            <connections>
+                <outlet property="chatTableView" destination="qLv-0c-Q6M" id="xe5-JH-Pdu"/>
+                <outlet property="mapView" destination="gPR-YC-bAH" id="fjM-WP-GXH"/>
+                <outlet property="navBar" destination="k1T-9e-Zp2" id="XfG-8l-fmJ"/>
+                <outlet property="view" destination="07h-F1-Upg" id="c1y-r9-kVK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="07h-F1-Upg">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gPR-YC-bAH">
+                    <rect key="frame" x="0.0" y="44" width="414" height="438"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="438" id="uzb-qJ-DPH"/>
+                    </constraints>
+                </mapView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qLv-0c-Q6M">
+                    <rect key="frame" x="0.0" y="482" width="414" height="414"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="414" id="aEu-XD-csY"/>
+                    </constraints>
+                </tableView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k1T-9e-Zp2" userLabel="Navigation Bar">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <items>
+                        <navigationItem title="Title" id="GH0-Ap-CZ2"/>
+                    </items>
+                </navigationBar>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="qLv-0c-Q6M" firstAttribute="trailing" secondItem="oPq-eH-gYI" secondAttribute="trailing" id="5Wk-aq-cC2"/>
+                <constraint firstItem="gPR-YC-bAH" firstAttribute="top" secondItem="oPq-eH-gYI" secondAttribute="top" id="8ZW-J6-ZaJ"/>
+                <constraint firstItem="gPR-YC-bAH" firstAttribute="top" secondItem="oPq-eH-gYI" secondAttribute="top" id="NeE-nK-O4e"/>
+                <constraint firstItem="k1T-9e-Zp2" firstAttribute="trailing" secondItem="oPq-eH-gYI" secondAttribute="trailing" id="WHc-vt-TdA"/>
+                <constraint firstItem="qLv-0c-Q6M" firstAttribute="top" secondItem="gPR-YC-bAH" secondAttribute="bottom" id="YOm-AX-tnP"/>
+                <constraint firstItem="qLv-0c-Q6M" firstAttribute="leading" secondItem="oPq-eH-gYI" secondAttribute="leading" id="g3P-qG-S9b"/>
+                <constraint firstItem="k1T-9e-Zp2" firstAttribute="top" secondItem="oPq-eH-gYI" secondAttribute="top" id="l4p-l5-QNG"/>
+                <constraint firstItem="gPR-YC-bAH" firstAttribute="leading" secondItem="oPq-eH-gYI" secondAttribute="leading" id="lSJ-H3-zWC"/>
+                <constraint firstItem="oPq-eH-gYI" firstAttribute="trailing" secondItem="gPR-YC-bAH" secondAttribute="trailing" id="mFL-gy-Mwm"/>
+                <constraint firstItem="k1T-9e-Zp2" firstAttribute="leading" secondItem="oPq-eH-gYI" secondAttribute="leading" id="wId-DB-n3l"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="oPq-eH-gYI"/>
+            <point key="canvasLocation" x="74" y="38"/>
+        </view>
+    </objects>
+</document>

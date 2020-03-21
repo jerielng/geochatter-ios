@@ -8,11 +8,9 @@
 
 import Foundation
 
-@objc
 class BubbleManager: NSObject {
     static let sharedInstance = BubbleManager()
 
-    @objc
     func createNewBubble() {
     }
 }

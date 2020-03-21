@@ -11,7 +11,16 @@ import Foundation
 class Bubble: NSObject {
     var authorId: String?
     var chatterText: String?
-    var dateTime: NSDate?
+    var dateTime: Date?
     var coordinateLat: Double?
     var coordinateLng: Double?
+
+    init(authorId: String?, chatterText: String?, dateTime: Date?, coordinateLat: Double?, coordinateLng: Double?) {
+        super.init()
+        self.authorId = authorId
+        self.chatterText = chatterText
+        self.dateTime = dateTime
+        self.coordinateLat = coordinateLat
+        self.coordinateLng = coordinateLng
+    }
 }

@@ -12,12 +12,22 @@ class BubbleCell: UITableViewCell {
     var userImage: UIImageView!
     var userNameText: UITextView!
     var userContentText: UITextView!
-    
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+
+    init(userId: String?, userPostId: String?) {
+        if let userId = userId {
+        }
+
+        if let userPostId = userPostId {
+        }
+
+        super.init(style: .default, reuseIdentifier: nil)
     }
 }

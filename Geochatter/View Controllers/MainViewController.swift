@@ -32,11 +32,11 @@ class MainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
-    
+
     private func setUpMapView() {
         mapView.showsUserLocation = true
     }
-    
+
     private func setUpTableView() {
         chatTableView.backgroundColor = GlobalColors.tableViewCellColor
     }
@@ -45,7 +45,13 @@ class MainViewController: UIViewController {
         guard let navBarItem = navBar.topItem else { return }
         navBar.backgroundColor = GlobalColors.tableViewCellColor
         navBarItem.title = GlobalStrings.mainVCTitle
-        navBarItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(bubbleManager.createNewBubble))
+        navBarItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonClicked))
+    }
+
+    @objc
+    private func addButtonClicked() {
+        let bubbleFormVC = BubbleFormViewController()
+        self.present(bubbleFormVC, animated: true, completion: nil)
     }
 }
 
@@ -59,4 +65,7 @@ extension MainViewController: MKMapViewDelegate {
 
 // MARK: - UITableViewDelegate
 extension MainViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("")
+    }
 }
