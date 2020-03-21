@@ -23,6 +23,7 @@
 		EC385D7023B82CD800EFFD76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC385D6F23B82CD800EFFD76 /* Assets.xcassets */; };
 		EC549D9E242598AB003CAF0A /* BubbleFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC549D9D242598AB003CAF0A /* BubbleFormViewController.xib */; };
 		EC549DA0242598BA003CAF0A /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC549D9F242598BA003CAF0A /* MainViewController.xib */; };
+		EC7ED45D2425C32D00F922C4 /* NavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC7ED45C2425C32D00F922C4 /* NavigationController.xib */; };
 		EC8C4A1F23B835FE00C0D208 /* GlobalColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8C4A1E23B835FE00C0D208 /* GlobalColors.swift */; };
 		ECE05CDF23B83A20005974C4 /* GlobalKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECE05CDE23B83A20005974C4 /* GlobalKeys.plist */; };
 /* End PBXBuildFile section */
@@ -47,6 +48,7 @@
 		EC385D7423B82CD800EFFD76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC549D9D242598AB003CAF0A /* BubbleFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BubbleFormViewController.xib; sourceTree = "<group>"; };
 		EC549D9F242598BA003CAF0A /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		EC7ED45C2425C32D00F922C4 /* NavigationController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationController.xib; sourceTree = "<group>"; };
 		EC8C4A1E23B835FE00C0D208 /* GlobalColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalColors.swift; sourceTree = "<group>"; };
 		ECE05CDE23B83A20005974C4 /* GlobalKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GlobalKeys.plist; sourceTree = "<group>"; };
 		F89E5F669ADC07B6C3E8B65C /* Pods-Geochatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geochatter.release.xcconfig"; path = "Target Support Files/Pods-Geochatter/Pods-Geochatter.release.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			children = (
 				EC549D9D242598AB003CAF0A /* BubbleFormViewController.xib */,
 				EC549D9F242598BA003CAF0A /* MainViewController.xib */,
+				EC7ED45C2425C32D00F922C4 /* NavigationController.xib */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				EC549D9E242598AB003CAF0A /* BubbleFormViewController.xib in Resources */,
 				EC549DA0242598BA003CAF0A /* MainViewController.xib in Resources */,
 				EC385D7023B82CD800EFFD76 /* Assets.xcassets in Resources */,
+				EC7ED45D2425C32D00F922C4 /* NavigationController.xib in Resources */,
 				EC20805923B83BE70074B9C2 /* GoogleService-Info.plist in Resources */,
 				ECE05CDF23B83A20005974C4 /* GlobalKeys.plist in Resources */,
 			);

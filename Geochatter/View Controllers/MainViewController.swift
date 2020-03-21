@@ -48,8 +48,7 @@ class MainViewController: UIViewController {
         navBarItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonClicked))
     }
 
-    @objc
-    private func addButtonClicked() {
+    @IBAction private func addButtonClicked() {
         let bubbleFormVC = BubbleFormViewController()
         self.present(bubbleFormVC, animated: true, completion: nil)
     }

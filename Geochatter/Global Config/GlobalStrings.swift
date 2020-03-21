@@ -8,4 +8,5 @@
 
 struct GlobalStrings {
     static let mainVCTitle = "Your Local Chatter"
+    static let bubbleInputPrompt = "What do you want to say?"
 }
