@@ -11,6 +11,11 @@ import Foundation
 class BubbleManager: NSObject {
     static let sharedInstance = BubbleManager()
 
-    func createNewBubble() {
+    func createNewBubble(with text: String) {
+        let bubble = Bubble(authorId: "",
+                            chatterText: text,
+                            dateTime: Date(),
+                            coordinateLat: 0,
+                            coordinateLng: 0)
     }
 }
