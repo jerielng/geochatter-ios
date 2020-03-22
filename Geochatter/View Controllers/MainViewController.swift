@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var navBar: UINavigationBar!
 
+    let locationManager = CLLocationManager()
     let bubbleManager = BubbleManager.sharedInstance
 
     override func viewDidLoad() {
@@ -34,7 +35,10 @@ class MainViewController: UIViewController {
     }
 
     private func setUpMapView() {
-        mapView.showsUserLocation = true
+        if CLLocationManager.locationServicesEnabled() {
+        } else {
+        }
+//        mapView.showsUserLocation = true
     }
 
     private func setUpTableView() {
