@@ -56,7 +56,7 @@ class BubbleFormViewController: UIViewController {
         })
 
         alert.addAction(UIAlertAction(title: GlobalStrings.cancel, style: .cancel, handler: nil))
-        
+
         self.present(alert, animated: true, completion: nil)
     }
 
