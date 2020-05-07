@@ -23,9 +23,11 @@ class BubbleCell: UITableViewCell {
 
     init(userId: String?, userPostId: String?) {
         if let userId = userId {
+            userNameText.text = userId
         }
 
         if let userPostId = userPostId {
+            
         }
 
         super.init(style: .default, reuseIdentifier: nil)

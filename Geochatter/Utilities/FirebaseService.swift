@@ -9,4 +9,5 @@
 import Firebase
 
 class FirebaseService {
+    static let sharedInstance = FirebaseService()
 }

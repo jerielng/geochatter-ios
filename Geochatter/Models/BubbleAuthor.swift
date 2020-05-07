@@ -8,4 +8,9 @@
 
 class BubbleAuthor {
     var authorId: String?
+    var authorName: String?
+    
+    init(authorId: String) {
+        self.authorId = authorId
+    }
 }

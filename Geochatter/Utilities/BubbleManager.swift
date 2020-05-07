@@ -8,13 +8,13 @@
 
 import Foundation
 
-class BubbleManager: NSObject {
+class BubbleManager {
     static let sharedInstance = BubbleManager()
 
     func createNewBubble(with text: String) {
         let bubble = Bubble(authorId: "",
                             chatterText: text,
-                            dateTime: Date(),
+                            dateTime: DateManager.getCurrentDate(),
                             coordinateLat: 0,
                             coordinateLng: 0)
     }
