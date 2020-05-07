@@ -6,7 +6,7 @@ target 'Geochatter' do
   use_frameworks!
 
   # Pods for Geochatter
-  pod 'Firebase/Analytics'
+  pod 'Firebase'
   pod 'SwiftLint'
 
 end
