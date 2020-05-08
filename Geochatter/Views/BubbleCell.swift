@@ -27,7 +27,6 @@ class BubbleCell: UITableViewCell {
         }
 
         if let userPostId = userPostId {
-            
         }
 
         super.init(style: .default, reuseIdentifier: nil)

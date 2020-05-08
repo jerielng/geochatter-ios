@@ -10,8 +10,8 @@ import Foundation
 
 class DateManager {
     lazy var dateFormatter = DateFormatter()
-    
+
     static func getCurrentDate() -> Date {
-        return Date()
+        Date()
     }
 }

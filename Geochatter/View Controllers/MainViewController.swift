@@ -15,22 +15,33 @@ class MainViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var navBar: UINavigationBar!
 
-    let locationManager = CLLocationManager()
     let bubbleManager = BubbleManager.sharedInstance
+    let locationService = LocationService.sharedInstance
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = GlobalColors.appBackgroundColor
+        setUpLocationViewModel()
         setUpMapView()
         setUpTableView()
         setUpNavBar()
     }
 
-    private func setUpMapView() {
+    private func setUpLocationViewModel() {
         if CLLocationManager.locationServicesEnabled() {
-        } else {
+            self.requestLocationPermissions()
         }
-//        mapView.showsUserLocation = true
+        locationService.setLocationDelegate(delegate: self)
+    }
+
+    private func setUpMapView() {
+        mapView.showsUserLocation = true
+        guard let currentLocation = locationService.getCurrentLocation(),
+            let locationDistance = CLLocationDistance(exactly: 8000) else { return }
+        let currentRegion = MKCoordinateRegion(center: currentLocation.coordinate,
+                                               latitudinalMeters: locationDistance,
+                                               longitudinalMeters: locationDistance)
+        mapView.setRegion(mapView.regionThatFits(currentRegion), animated: true)
     }
 
     private func setUpTableView() {
@@ -50,11 +61,32 @@ class MainViewController: UIViewController {
     }
 }
 
+extension MainViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        guard let currentLocation = locations.first else { return }
+    }
+
+    private func requestLocationPermissions() {
+        switch CLLocationManager.authorizationStatus() {
+        case .notDetermined:
+            locationService.requestPermissions()
+        case .denied, .restricted:
+            present(UIAlertController(title: "Location Permissions Not Allowed",
+                                      message: "Please enable location services in system settings to make full use of Geochatter",
+                                      preferredStyle: .alert), animated: false)
+        case .authorizedAlways, .authorizedWhenInUse:
+            break
+        default:
+            return
+        }
+    }
+}
+
 // MARK: - MKMapViewDelegate
 extension MainViewController: MKMapViewDelegate {
     func pinCurrentLocation() {
-//        let currentLocationPin = MKMapItem.forCurrentLocation()
-//        self.mapView.
+        //        let currentLocationPin = MKMapItem.forCurrentLocation()
+        //        self.mapView.
     }
 }
 

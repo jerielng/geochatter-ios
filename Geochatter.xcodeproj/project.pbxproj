@@ -23,8 +23,7 @@
 		EC385D7023B82CD800EFFD76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC385D6F23B82CD800EFFD76 /* Assets.xcassets */; };
 		EC549D9E242598AB003CAF0A /* BubbleFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC549D9D242598AB003CAF0A /* BubbleFormViewController.xib */; };
 		EC549DA0242598BA003CAF0A /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC549D9F242598BA003CAF0A /* MainViewController.xib */; };
-		EC70B45B2464CD5B005E3C76 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70B45A2464CD5B005E3C76 /* LocationManager.swift */; };
-		EC70B45D2464CD7C005E3C76 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70B45C2464CD7C005E3C76 /* Location.swift */; };
+		EC70B45B2464CD5B005E3C76 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70B45A2464CD5B005E3C76 /* LocationService.swift */; };
 		EC70B45F2464CDDC005E3C76 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70B45E2464CDDC005E3C76 /* UserManager.swift */; };
 		EC70B4612464CE12005E3C76 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70B4602464CE12005E3C76 /* DateManager.swift */; };
 		EC79A28F2427396200E42D89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC79A28E2427396200E42D89 /* LaunchScreen.storyboard */; };
@@ -53,8 +52,7 @@
 		EC385D7423B82CD800EFFD76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC549D9D242598AB003CAF0A /* BubbleFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BubbleFormViewController.xib; sourceTree = "<group>"; };
 		EC549D9F242598BA003CAF0A /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		EC70B45A2464CD5B005E3C76 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		EC70B45C2464CD7C005E3C76 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		EC70B45A2464CD5B005E3C76 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		EC70B45E2464CDDC005E3C76 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		EC70B4602464CE12005E3C76 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		EC79A28E2427396200E42D89 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 			children = (
 				EC05AD8723B85B0B006A8473 /* Bubble.swift */,
 				EC1467ED240A164D006B350D /* BubbleAuthor.swift */,
-				EC70B45C2464CD7C005E3C76 /* Location.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -109,7 +106,7 @@
 				EC2BC38E2416038C00F1269B /* BubbleManager.swift */,
 				EC70B4602464CE12005E3C76 /* DateManager.swift */,
 				EC05AD8923B85D0D006A8473 /* FirebaseService.swift */,
-				EC70B45A2464CD5B005E3C76 /* LocationManager.swift */,
+				EC70B45A2464CD5B005E3C76 /* LocationService.swift */,
 				EC70B45E2464CDDC005E3C76 /* UserManager.swift */,
 			);
 			path = Utilities;
@@ -343,14 +340,13 @@
 				EC70B4612464CE12005E3C76 /* DateManager.swift in Sources */,
 				EC2BC3912416057700F1269B /* BubbleFormViewController.swift in Sources */,
 				EC2C7A642415F0DF0062B790 /* GlobalStrings.swift in Sources */,
-				EC70B45D2464CD7C005E3C76 /* Location.swift in Sources */,
 				EC05AD8823B85B0B006A8473 /* Bubble.swift in Sources */,
 				EC385D6723B82CD600EFFD76 /* AppDelegate.swift in Sources */,
 				EC1467F0240A1756006B350D /* BubbleCell.swift in Sources */,
 				EC2BC38F2416038C00F1269B /* BubbleManager.swift in Sources */,
 				EC1467EE240A164D006B350D /* BubbleAuthor.swift in Sources */,
 				EC385D6923B82CD600EFFD76 /* SceneDelegate.swift in Sources */,
-				EC70B45B2464CD5B005E3C76 /* LocationManager.swift in Sources */,
+				EC70B45B2464CD5B005E3C76 /* LocationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
