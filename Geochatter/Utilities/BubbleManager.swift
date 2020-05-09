@@ -18,7 +18,7 @@ class BubbleManager {
         let userId: String = UserManager.sharedInstance.getCurrentUser().authorId
         let bubble = Bubble(authorId: userId,
                             chatterText: text,
-                            dateTime: DateManager.getCurrentDate(),
+                            dateTime: DateUtils.getCurrentDate(),
                             coordinateLat: location.coordinate.latitude,
                             coordinateLng: location.coordinate.longitude)
         FirebaseService.sharedInstance.uploadBubble(bubble)
@@ -32,7 +32,7 @@ class BubbleManager {
         bubblesForCurrentLocation = currentBubbles
     }
 
-    func parseBubbleFields(dictionary: [String: Any]) -> Bubble? {
+    func parseBubbleFields(from dictionary: [String: Any]) -> Bubble? {
         let currentUserLocation = LocationService.sharedInstance.getCurrentLocation()
         guard let latitude = convertFieldToDouble(dictionary[GlobalStrings.latitudeField]),
             let longitude = convertFieldToDouble(dictionary[GlobalStrings.longitudeField]),
@@ -42,7 +42,7 @@ class BubbleManager {
             let chatterText = dictionary[GlobalStrings.textField] as? String else { return nil }
         return Bubble(authorId: authorId,
                       chatterText: chatterText,
-                      dateTime: Date(),
+                      dateTime: DateUtils.getCurrentDate(),
                       coordinateLat: latitude,
                       coordinateLng: longitude)
     }

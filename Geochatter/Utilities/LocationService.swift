@@ -15,6 +15,10 @@ class LocationService {
 
     private var currentLocation: CLLocation?
 
+    func requestPermissions() {
+        locationManager.requestWhenInUseAuthorization()
+    }
+
     func setLocationDelegate(delegate: CLLocationManagerDelegate) {
         locationManager.delegate = delegate
         self.setUpLocationManager()
@@ -34,7 +38,16 @@ class LocationService {
         currentLocation = location
     }
 
-    func requestPermissions() {
-        locationManager.requestWhenInUseAuthorization()
+    func isLocationDifferent(newLocation: CLLocation) -> Bool {
+        guard let currentLocation = currentLocation else { return true }
+        let currentLatitude = roundLocationValue(value: currentLocation.coordinate.latitude)
+        let currentLongitude = roundLocationValue(value: currentLocation.coordinate.longitude)
+        let newLatitude = roundLocationValue(value: newLocation.coordinate.latitude)
+        let newLongitude = roundLocationValue(value: newLocation.coordinate.longitude)
+        return currentLatitude != newLatitude && currentLongitude != newLongitude
+    }
+
+    func roundLocationValue(value: Double) -> Double {
+        return Double(round(10000 * value) / 10000)
     }
 }

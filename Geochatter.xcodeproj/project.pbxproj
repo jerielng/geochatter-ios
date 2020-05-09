@@ -25,7 +25,7 @@
 		EC549DA0242598BA003CAF0A /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC549D9F242598BA003CAF0A /* MainViewController.xib */; };
 		EC70B45B2464CD5B005E3C76 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70B45A2464CD5B005E3C76 /* LocationService.swift */; };
 		EC70B45F2464CDDC005E3C76 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70B45E2464CDDC005E3C76 /* UserManager.swift */; };
-		EC70B4612464CE12005E3C76 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70B4602464CE12005E3C76 /* DateManager.swift */; };
+		EC70B4612464CE12005E3C76 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70B4602464CE12005E3C76 /* DateUtils.swift */; };
 		EC79A28F2427396200E42D89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC79A28E2427396200E42D89 /* LaunchScreen.storyboard */; };
 		EC7ED45D2425C32D00F922C4 /* NavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC7ED45C2425C32D00F922C4 /* NavigationController.xib */; };
 		EC8C4A1F23B835FE00C0D208 /* GlobalColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8C4A1E23B835FE00C0D208 /* GlobalColors.swift */; };
@@ -54,7 +54,7 @@
 		EC549D9F242598BA003CAF0A /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		EC70B45A2464CD5B005E3C76 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		EC70B45E2464CDDC005E3C76 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
-		EC70B4602464CE12005E3C76 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
+		EC70B4602464CE12005E3C76 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		EC79A28E2427396200E42D89 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC7ED45C2425C32D00F922C4 /* NavigationController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationController.xib; sourceTree = "<group>"; };
 		EC8C4A1E23B835FE00C0D208 /* GlobalColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalColors.swift; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				EC2BC38E2416038C00F1269B /* BubbleManager.swift */,
-				EC70B4602464CE12005E3C76 /* DateManager.swift */,
+				EC70B4602464CE12005E3C76 /* DateUtils.swift */,
 				EC05AD8923B85D0D006A8473 /* FirebaseService.swift */,
 				EC70B45A2464CD5B005E3C76 /* LocationService.swift */,
 				EC70B45E2464CDDC005E3C76 /* UserManager.swift */,
@@ -337,7 +337,7 @@
 				EC8C4A1F23B835FE00C0D208 /* GlobalColors.swift in Sources */,
 				EC70B45F2464CDDC005E3C76 /* UserManager.swift in Sources */,
 				EC385D6B23B82CD600EFFD76 /* MainViewController.swift in Sources */,
-				EC70B4612464CE12005E3C76 /* DateManager.swift in Sources */,
+				EC70B4612464CE12005E3C76 /* DateUtils.swift in Sources */,
 				EC2BC3912416057700F1269B /* BubbleFormViewController.swift in Sources */,
 				EC2C7A642415F0DF0062B790 /* GlobalStrings.swift in Sources */,
 				EC05AD8823B85B0B006A8473 /* Bubble.swift in Sources */,

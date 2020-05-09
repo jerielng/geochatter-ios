@@ -35,7 +35,7 @@ class FirebaseService {
             guard error == nil, let documents = querySnapshot?.documents else { return }
             var bubblesArray = [Bubble]()
             for document in documents {
-                guard let bubble = BubbleManager.sharedInstance.parseBubbleFields(dictionary: document.data()) else { continue }
+                guard let bubble = BubbleManager.sharedInstance.parseBubbleFields(from: document.data()) else { continue }
                 bubblesArray.append(bubble)
             }
             BubbleManager.sharedInstance.updateCurrentBubbles(currentBubbles: bubblesArray)

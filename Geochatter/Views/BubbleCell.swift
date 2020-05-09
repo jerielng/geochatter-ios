@@ -9,6 +9,8 @@
 import UIKit
 
 class BubbleCell: UITableViewCell {
+    static let reuseIdentifier = "BubbleCell"
+    
     var userImage: UIImageView!
     var userNameText: UITextView!
     var userContentText: UITextView!

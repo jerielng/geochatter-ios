@@ -1,5 +1,5 @@
 //
-//  DateManager.swift
+//  DateUtils.swift
 //  Geochatter
 //
 //  Created by Jeriel Ng on 5/7/20.
@@ -8,10 +8,10 @@
 
 import Foundation
 
-class DateManager {
+class DateUtils {
     lazy var dateFormatter = DateFormatter()
 
     static func getCurrentDate() -> Date {
-        Date()
+        return Date()
     }
 }
