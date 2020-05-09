@@ -32,7 +32,6 @@ whitelist_rules:
     - return_arrow_whitespace
     - shorthand_operator
     - switch_case_alignment
-    - trailing_closure
     - trailing_comma
     - trailing_newline
     - trailing_semicolon

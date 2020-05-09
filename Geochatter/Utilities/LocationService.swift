@@ -13,6 +13,8 @@ class LocationService {
 
     private let locationManager = CLLocationManager()
 
+    private var currentLocation: CLLocation?
+
     func setLocationDelegate(delegate: CLLocationManagerDelegate) {
         locationManager.delegate = delegate
         self.setUpLocationManager()
@@ -25,7 +27,11 @@ class LocationService {
     }
 
     func getCurrentLocation() -> CLLocation? {
-        return locationManager.location
+        return currentLocation
+    }
+
+    func updateCurrentLocation(location: CLLocation) {
+        currentLocation = location
     }
 
     func requestPermissions() {

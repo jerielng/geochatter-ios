@@ -13,3 +13,12 @@ struct GlobalStrings {
     static let choosePhotoButton = "Choose from Photo Library"
     static let cancel = "Cancel"
 }
+
+// MARK: - Firebase Constants
+extension GlobalStrings {
+    static let bubblesCollection = "bubbles"
+    static let authorField = "author"
+    static let textField = "text"
+    static let latitudeField = "latitude"
+    static let longitudeField = "longitude"
+}

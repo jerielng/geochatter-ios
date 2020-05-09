@@ -10,25 +10,35 @@ import Firebase
 
 class FirebaseService {
     static let sharedInstance = FirebaseService()
-    let bubblesCollection = "bubbles"
-    
+
     private var database: Firestore?
-    
+
     func startService() {
         FirebaseApp.configure()
         database = Firestore.firestore()
     }
-    
+
     func uploadBubble(_ bubble: Bubble) {
         var _: DocumentReference? =
-            database?.collection(bubblesCollection).addDocument(data: [
-                "author": "\(bubble.authorId)",
-                "text": "\(bubble.chatterText)",
-                "latitude": "\(bubble.coordinateLat)",
-                "longitude": "\(bubble.coordinateLng)"
-                ],
-                                                                completion: { error in
-                                                                    
-            })
+        database?.collection(GlobalStrings.bubblesCollection).addDocument(data: [
+            GlobalStrings.authorField: "\(bubble.authorId)",
+            GlobalStrings.textField: "\(bubble.chatterText)",
+            GlobalStrings.latitudeField: "\(bubble.coordinateLat)",
+            GlobalStrings.longitudeField: "\(bubble.coordinateLng)"
+            ],
+                                                                          completion: { error in
+        })
+    }
+
+    func downloadBubbles() {
+        database?.collection(GlobalStrings.bubblesCollection).getDocuments(completion: { querySnapshot, error in
+            guard error == nil, let documents = querySnapshot?.documents else { return }
+            var bubblesArray = [Bubble]()
+            for document in documents {
+                guard let bubble = BubbleManager.sharedInstance.parseBubbleFields(dictionary: document.data()) else { continue }
+                bubblesArray.append(bubble)
+            }
+            BubbleManager.sharedInstance.updateCurrentBubbles(currentBubbles: bubblesArray)
+        })
     }
 }
