@@ -12,8 +12,8 @@ class BubbleManager {
     static let sharedInstance = BubbleManager()
 
     func createNewBubble(with text: String) {
-        guard let location = LocationService.sharedInstance.getCurrentLocation(),
-            let userId: String = UserManager.sharedInstance.getCurrentUser().authorId else { return }
+        guard let location = LocationService.sharedInstance.getCurrentLocation() else { return }
+        let userId: String = UserManager.sharedInstance.getCurrentUser().authorId
         let bubble = Bubble(authorId: userId,
                             chatterText: text,
                             dateTime: DateManager.getCurrentDate(),

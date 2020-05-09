@@ -10,8 +10,25 @@ import Firebase
 
 class FirebaseService {
     static let sharedInstance = FirebaseService()
+    let bubblesCollection = "bubbles"
+    
+    private var database: Firestore?
+    
+    func startService() {
+        FirebaseApp.configure()
+        database = Firestore.firestore()
+    }
     
     func uploadBubble(_ bubble: Bubble) {
-        
+        var _: DocumentReference? =
+            database?.collection(bubblesCollection).addDocument(data: [
+                "author": "\(bubble.authorId)",
+                "text": "\(bubble.chatterText)",
+                "latitude": "\(bubble.coordinateLat)",
+                "longitude": "\(bubble.coordinateLng)"
+                ],
+                                                                completion: { error in
+                                                                    
+            })
     }
 }
