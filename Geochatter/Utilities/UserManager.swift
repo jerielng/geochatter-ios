@@ -7,4 +7,15 @@
 //
 
 class UserManager {
+    static let sharedInstance = UserManager()
+    
+    private var currentUser: BubbleAuthor?
+    
+    func getCurrentUser() -> BubbleAuthor {
+        return currentUser ?? BubbleAuthor(authorId: "0")
+    }
+    
+    func updateCurrentUser(_ user: BubbleAuthor) {
+        currentUser = user
+    }
 }

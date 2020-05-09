@@ -12,10 +12,13 @@ class BubbleManager {
     static let sharedInstance = BubbleManager()
 
     func createNewBubble(with text: String) {
-        let bubble = Bubble(authorId: "",
+        guard let location = LocationService.sharedInstance.getCurrentLocation(),
+            let userId: String = UserManager.sharedInstance.getCurrentUser().authorId else { return }
+        let bubble = Bubble(authorId: userId,
                             chatterText: text,
                             dateTime: DateManager.getCurrentDate(),
-                            coordinateLat: 0,
-                            coordinateLng: 0)
+                            coordinateLat: location.coordinate.latitude,
+                            coordinateLng: location.coordinate.longitude)
+        FirebaseService.sharedInstance.uploadBubble(bubble)
     }
 }

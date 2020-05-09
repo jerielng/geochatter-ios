@@ -84,15 +84,8 @@ extension MainViewController: CLLocationManagerDelegate {
 
 // MARK: - MKMapViewDelegate
 extension MainViewController: MKMapViewDelegate {
-    func pinCurrentLocation() {
-        //        let currentLocationPin = MKMapItem.forCurrentLocation()
-        //        self.mapView.
-    }
 }
 
 // MARK: - UITableViewDelegate
 extension MainViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("")
-    }
 }

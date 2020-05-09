@@ -10,4 +10,8 @@ import Firebase
 
 class FirebaseService {
     static let sharedInstance = FirebaseService()
+    
+    func uploadBubble(_ bubble: Bubble) {
+        
+    }
 }
