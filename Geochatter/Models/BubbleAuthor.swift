@@ -7,10 +7,19 @@
 //
 
 class BubbleAuthor {
-    var authorId: String
-    var authorName: String?
+    private var authorId: String
+    private var authorName: String
 
     init(authorId: String) {
         self.authorId = authorId
+        self.authorName = ""
+    }
+
+    func getName() -> String {
+        return authorName
+    }
+
+    func getId() -> String {
+        return authorId
     }
 }

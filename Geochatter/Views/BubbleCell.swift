@@ -9,11 +9,11 @@
 import UIKit
 
 class BubbleCell: UITableViewCell {
-    static let reuseIdentifier = "BubbleCell"
-    
-    var userImage: UIImageView!
-    var userNameText: UITextView!
-    var userContentText: UITextView!
+    static let reuseIdentifier = "bubbleCell"
+
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var chatterLabel: UILabel!
+    @IBOutlet weak var dateTimeLabel: UILabel!
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -21,16 +21,5 @@ class BubbleCell: UITableViewCell {
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-    }
-
-    init(userId: String?, userPostId: String?) {
-        if let userId = userId {
-            userNameText.text = userId
-        }
-
-        if let userPostId = userPostId {
-        }
-
-        super.init(style: .default, reuseIdentifier: nil)
     }
 }

@@ -13,14 +13,16 @@ class BubbleManager {
 
     private var bubblesForCurrentLocation: [Bubble] = []
 
+    weak var delegate: UpdateDelegate?
+
     func createNewBubble(with text: String) {
         guard let location = LocationService.sharedInstance.getCurrentLocation() else { return }
-        let userId: String = UserManager.sharedInstance.getCurrentUser().authorId
+        let userId: String = UserManager.sharedInstance.getCurrentUser().getId()
         let bubble = Bubble(authorId: userId,
                             chatterText: text,
-                            dateTime: DateUtils.getCurrentDate(),
-                            coordinateLat: location.coordinate.latitude,
-                            coordinateLng: location.coordinate.longitude)
+                            dateTime: FormatterUtils.getCurrentDate(),
+                            coordinateLat: FormatterUtils.roundLocationValue(value: location.coordinate.latitude),
+                            coordinateLng: FormatterUtils.roundLocationValue(value: location.coordinate.longitude))
         FirebaseService.sharedInstance.uploadBubble(bubble)
     }
 
@@ -30,19 +32,18 @@ class BubbleManager {
 
     func updateCurrentBubbles(currentBubbles: [Bubble]) {
         bubblesForCurrentLocation = currentBubbles
+        delegate?.didUpdateData()
     }
 
     func parseBubbleFields(from dictionary: [String: Any]) -> Bubble? {
-        let currentUserLocation = LocationService.sharedInstance.getCurrentLocation()
         guard let latitude = convertFieldToDouble(dictionary[GlobalStrings.latitudeField]),
             let longitude = convertFieldToDouble(dictionary[GlobalStrings.longitudeField]),
-            currentUserLocation?.coordinate.latitude == latitude,
-            currentUserLocation?.coordinate.longitude == longitude,
+            !LocationService.sharedInstance.isLocationDifferent(latitude: latitude, longitude: longitude),
             let authorId = dictionary[GlobalStrings.authorField] as? String,
             let chatterText = dictionary[GlobalStrings.textField] as? String else { return nil }
         return Bubble(authorId: authorId,
                       chatterText: chatterText,
-                      dateTime: DateUtils.getCurrentDate(),
+                      dateTime: FormatterUtils.getCurrentDate(),
                       coordinateLat: latitude,
                       coordinateLng: longitude)
     }

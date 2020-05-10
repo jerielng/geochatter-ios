@@ -13,6 +13,8 @@
 		EC1467EE240A164D006B350D /* BubbleAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1467ED240A164D006B350D /* BubbleAuthor.swift */; };
 		EC1467F0240A1756006B350D /* BubbleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1467EF240A1756006B350D /* BubbleCell.swift */; };
 		EC20805923B83BE70074B9C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC20805823B83BE70074B9C2 /* GoogleService-Info.plist */; };
+		EC2399E324677B6B006F5FCC /* BubbleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2399E224677B6B006F5FCC /* BubbleCell.xib */; };
+		EC2399E5246786DC006F5FCC /* UpdateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2399E4246786DC006F5FCC /* UpdateDelegate.swift */; };
 		EC2BC38C2416001100F1269B /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2BC38B2416001100F1269B /* NavigationController.swift */; };
 		EC2BC38F2416038C00F1269B /* BubbleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2BC38E2416038C00F1269B /* BubbleManager.swift */; };
 		EC2BC3912416057700F1269B /* BubbleFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2BC3902416057700F1269B /* BubbleFormViewController.swift */; };
@@ -25,7 +27,7 @@
 		EC549DA0242598BA003CAF0A /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC549D9F242598BA003CAF0A /* MainViewController.xib */; };
 		EC70B45B2464CD5B005E3C76 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70B45A2464CD5B005E3C76 /* LocationService.swift */; };
 		EC70B45F2464CDDC005E3C76 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70B45E2464CDDC005E3C76 /* UserManager.swift */; };
-		EC70B4612464CE12005E3C76 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70B4602464CE12005E3C76 /* DateUtils.swift */; };
+		EC70B4612464CE12005E3C76 /* FormatterUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70B4602464CE12005E3C76 /* FormatterUtils.swift */; };
 		EC79A28F2427396200E42D89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC79A28E2427396200E42D89 /* LaunchScreen.storyboard */; };
 		EC7ED45D2425C32D00F922C4 /* NavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC7ED45C2425C32D00F922C4 /* NavigationController.xib */; };
 		EC8C4A1F23B835FE00C0D208 /* GlobalColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8C4A1E23B835FE00C0D208 /* GlobalColors.swift */; };
@@ -40,6 +42,8 @@
 		EC1467ED240A164D006B350D /* BubbleAuthor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleAuthor.swift; sourceTree = "<group>"; };
 		EC1467EF240A1756006B350D /* BubbleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleCell.swift; sourceTree = "<group>"; };
 		EC20805823B83BE70074B9C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EC2399E224677B6B006F5FCC /* BubbleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BubbleCell.xib; sourceTree = "<group>"; };
+		EC2399E4246786DC006F5FCC /* UpdateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDelegate.swift; sourceTree = "<group>"; };
 		EC2BC38B2416001100F1269B /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		EC2BC38E2416038C00F1269B /* BubbleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleManager.swift; sourceTree = "<group>"; };
 		EC2BC3902416057700F1269B /* BubbleFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleFormViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +58,7 @@
 		EC549D9F242598BA003CAF0A /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		EC70B45A2464CD5B005E3C76 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		EC70B45E2464CDDC005E3C76 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
-		EC70B4602464CE12005E3C76 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		EC70B4602464CE12005E3C76 /* FormatterUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterUtils.swift; sourceTree = "<group>"; };
 		EC79A28E2427396200E42D89 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC7ED45C2425C32D00F922C4 /* NavigationController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationController.xib; sourceTree = "<group>"; };
 		EC8C4A1E23B835FE00C0D208 /* GlobalColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalColors.swift; sourceTree = "<group>"; };
@@ -104,10 +108,11 @@
 			isa = PBXGroup;
 			children = (
 				EC2BC38E2416038C00F1269B /* BubbleManager.swift */,
-				EC70B4602464CE12005E3C76 /* DateUtils.swift */,
+				EC70B4602464CE12005E3C76 /* FormatterUtils.swift */,
 				EC05AD8923B85D0D006A8473 /* FirebaseService.swift */,
 				EC70B45A2464CD5B005E3C76 /* LocationService.swift */,
 				EC70B45E2464CDDC005E3C76 /* UserManager.swift */,
+				EC2399E4246786DC006F5FCC /* UpdateDelegate.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				EC1467EF240A1756006B350D /* BubbleCell.swift */,
+				EC2399E224677B6B006F5FCC /* BubbleCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -259,6 +265,7 @@
 				EC549D9E242598AB003CAF0A /* BubbleFormViewController.xib in Resources */,
 				EC549DA0242598BA003CAF0A /* MainViewController.xib in Resources */,
 				EC385D7023B82CD800EFFD76 /* Assets.xcassets in Resources */,
+				EC2399E324677B6B006F5FCC /* BubbleCell.xib in Resources */,
 				EC7ED45D2425C32D00F922C4 /* NavigationController.xib in Resources */,
 				EC79A28F2427396200E42D89 /* LaunchScreen.storyboard in Resources */,
 				EC20805923B83BE70074B9C2 /* GoogleService-Info.plist in Resources */,
@@ -337,7 +344,7 @@
 				EC8C4A1F23B835FE00C0D208 /* GlobalColors.swift in Sources */,
 				EC70B45F2464CDDC005E3C76 /* UserManager.swift in Sources */,
 				EC385D6B23B82CD600EFFD76 /* MainViewController.swift in Sources */,
-				EC70B4612464CE12005E3C76 /* DateUtils.swift in Sources */,
+				EC70B4612464CE12005E3C76 /* FormatterUtils.swift in Sources */,
 				EC2BC3912416057700F1269B /* BubbleFormViewController.swift in Sources */,
 				EC2C7A642415F0DF0062B790 /* GlobalStrings.swift in Sources */,
 				EC05AD8823B85B0B006A8473 /* Bubble.swift in Sources */,
@@ -345,6 +352,7 @@
 				EC1467F0240A1756006B350D /* BubbleCell.swift in Sources */,
 				EC2BC38F2416038C00F1269B /* BubbleManager.swift in Sources */,
 				EC1467EE240A164D006B350D /* BubbleAuthor.swift in Sources */,
+				EC2399E5246786DC006F5FCC /* UpdateDelegate.swift in Sources */,
 				EC385D6923B82CD600EFFD76 /* SceneDelegate.swift in Sources */,
 				EC70B45B2464CD5B005E3C76 /* LocationService.swift in Sources */,
 			);

@@ -13,4 +13,5 @@ class GlobalColors {
     static let appSeparatorColor = UIColor.cyan
     static let tableViewParentColor = UIColor.darkGray
     static let tableViewCellColor = UIColor.gray
+    static let navBarColor = UIColor.purple
 }

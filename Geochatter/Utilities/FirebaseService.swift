@@ -13,21 +13,25 @@ class FirebaseService {
 
     private var database: Firestore?
 
+    weak var delegate: UpdateDelegate?
+
     func startService() {
         FirebaseApp.configure()
         database = Firestore.firestore()
     }
 
     func uploadBubble(_ bubble: Bubble) {
-        var _: DocumentReference? =
-        database?.collection(GlobalStrings.bubblesCollection).addDocument(data: [
-            GlobalStrings.authorField: "\(bubble.authorId)",
-            GlobalStrings.textField: "\(bubble.chatterText)",
-            GlobalStrings.latitudeField: "\(bubble.coordinateLat)",
-            GlobalStrings.longitudeField: "\(bubble.coordinateLng)"
-            ],
-                                                                          completion: { error in
-        })
+        var _: DocumentReference? = database?.collection(
+            GlobalStrings.bubblesCollection).addDocument(data: [
+                GlobalStrings.authorField: "\(bubble.authorId)",
+                GlobalStrings.textField: "\(bubble.chatterText)",
+                GlobalStrings.latitudeField: "\(bubble.coordinateLat)",
+                GlobalStrings.longitudeField: "\(bubble.coordinateLng)"
+                ],
+                                                         completion: { [weak self] error in
+                                                            guard error == nil else { return }
+                                                            self?.downloadBubbles()
+            })
     }
 
     func downloadBubbles() {

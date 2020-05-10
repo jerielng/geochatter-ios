@@ -38,16 +38,21 @@ class LocationService {
         currentLocation = location
     }
 
-    func isLocationDifferent(newLocation: CLLocation) -> Bool {
+    func isLocationDifferent(newLocation: CLLocation? = nil, latitude: Double? = nil, longitude: Double? = nil) -> Bool {
         guard let currentLocation = currentLocation else { return true }
-        let currentLatitude = roundLocationValue(value: currentLocation.coordinate.latitude)
-        let currentLongitude = roundLocationValue(value: currentLocation.coordinate.longitude)
-        let newLatitude = roundLocationValue(value: newLocation.coordinate.latitude)
-        let newLongitude = roundLocationValue(value: newLocation.coordinate.longitude)
+        let currentLatitude = FormatterUtils.roundLocationValue(value: currentLocation.coordinate.latitude)
+        let currentLongitude = FormatterUtils.roundLocationValue(value: currentLocation.coordinate.longitude)
+        var newLatitude: Double = 0
+        var newLongitude: Double = 0
+        if let latitude = latitude, let longitude = longitude {
+            newLatitude = FormatterUtils.roundLocationValue(value: latitude)
+            newLongitude = FormatterUtils.roundLocationValue(value: longitude)
+        } else if let newLocation = newLocation {
+            newLatitude = FormatterUtils.roundLocationValue(value: newLocation.coordinate.latitude)
+            newLongitude = FormatterUtils.roundLocationValue(value: newLocation.coordinate.longitude)
+        } else {
+            return true
+        }
         return currentLatitude != newLatitude && currentLongitude != newLongitude
-    }
-
-    func roundLocationValue(value: Double) -> Double {
-        return Double(round(10000 * value) / 10000)
     }
 }

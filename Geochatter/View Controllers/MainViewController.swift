@@ -16,11 +16,17 @@ class MainViewController: UIViewController {
     @IBOutlet weak var navBar: UINavigationBar!
 
     private let bubbleManager = BubbleManager.sharedInstance
+    private let userManager = UserManager.sharedInstance
     private let locationService = LocationService.sharedInstance
+    private let firebaseService = FirebaseService.sharedInstance
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = GlobalColors.appBackgroundColor
+
+        firebaseService.delegate = self
+        bubbleManager.delegate = self
+
         setUpLocationService()
         setUpMapView()
         setUpTableView()
@@ -36,7 +42,7 @@ class MainViewController: UIViewController {
 
     private func setUpNavBar() {
         guard let navBarItem = navBar.topItem else { return }
-        navBar.backgroundColor = GlobalColors.tableViewCellColor
+        navBar.backgroundColor = GlobalColors.navBarColor
         navBarItem.title = GlobalStrings.mainVCTitle
         navBarItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonClicked))
     }
@@ -52,6 +58,7 @@ extension MainViewController: CLLocationManagerDelegate {
         guard let location = locations.first,
             locationService.isLocationDifferent(newLocation: location) else { return }
         locationService.updateCurrentLocation(location: location)
+        self.updateViewRange(animated: true)
         FirebaseService.sharedInstance.downloadBubbles()
     }
 
@@ -75,12 +82,16 @@ extension MainViewController: CLLocationManagerDelegate {
 extension MainViewController: MKMapViewDelegate {
     private func setUpMapView() {
         mapView.showsUserLocation = true
+        self.updateViewRange(animated: false)
+    }
+
+    private func updateViewRange(animated: Bool) {
         guard let currentLocation = locationService.getCurrentLocation(),
-            let locationDistance = CLLocationDistance(exactly: 8000) else { return }
+            let locationDistance = CLLocationDistance(exactly: 3000) else { return }
         let currentRegion = MKCoordinateRegion(center: currentLocation.coordinate,
                                                latitudinalMeters: locationDistance,
                                                longitudinalMeters: locationDistance)
-        mapView.setRegion(mapView.regionThatFits(currentRegion), animated: true)
+        mapView.setRegion(mapView.regionThatFits(currentRegion), animated: animated)
     }
 }
 
@@ -90,14 +101,37 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         chatTableView.backgroundColor = GlobalColors.tableViewCellColor
         chatTableView.delegate = self
         chatTableView.dataSource = self
+        chatTableView.register(UINib(nibName: "BubbleCell", bundle: nil),
+                               forCellReuseIdentifier: BubbleCell.reuseIdentifier)
     }
-    
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return BubbleManager.sharedInstance.getCurrentBubbles().count
+        return bubbleManager.getCurrentBubbles().count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: BubbleCell.reuseIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: BubbleCell.reuseIdentifier) as! BubbleCell
+        cell.authorLabel.text = bubbleManager.getCurrentBubbles()[indexPath.row].authorId
+        cell.chatterLabel.text = bubbleManager.getCurrentBubbles()[indexPath.row].chatterText
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return bubbleManager.getCurrentBubbles()[indexPath.row].authorId == userManager.getCurrentUser().getId()
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+        }
+    }
+}
+
+extension MainViewController: UpdateDelegate {
+    func didUpdateData() {
+        chatTableView.reloadData()
     }
 }
