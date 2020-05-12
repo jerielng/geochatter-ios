@@ -29,9 +29,6 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qLv-0c-Q6M">
                     <rect key="frame" x="0.0" y="482" width="414" height="414"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="414" id="aEu-XD-csY"/>
-                    </constraints>
                 </tableView>
                 <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k1T-9e-Zp2" userLabel="Navigation Bar">
                     <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -43,9 +40,9 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="qLv-0c-Q6M" firstAttribute="trailing" secondItem="oPq-eH-gYI" secondAttribute="trailing" id="5Wk-aq-cC2"/>
-                <constraint firstItem="gPR-YC-bAH" firstAttribute="top" secondItem="oPq-eH-gYI" secondAttribute="top" id="8ZW-J6-ZaJ"/>
                 <constraint firstItem="k1T-9e-Zp2" firstAttribute="top" secondItem="oPq-eH-gYI" secondAttribute="top" id="B91-1y-aHM"/>
                 <constraint firstItem="gPR-YC-bAH" firstAttribute="top" secondItem="oPq-eH-gYI" secondAttribute="top" id="NeE-nK-O4e"/>
+                <constraint firstAttribute="bottom" secondItem="qLv-0c-Q6M" secondAttribute="bottom" id="VwR-zU-HGx"/>
                 <constraint firstItem="k1T-9e-Zp2" firstAttribute="trailing" secondItem="oPq-eH-gYI" secondAttribute="trailing" id="WHc-vt-TdA"/>
                 <constraint firstItem="qLv-0c-Q6M" firstAttribute="top" secondItem="gPR-YC-bAH" secondAttribute="bottom" id="YOm-AX-tnP"/>
                 <constraint firstItem="qLv-0c-Q6M" firstAttribute="leading" secondItem="oPq-eH-gYI" secondAttribute="leading" id="g3P-qG-S9b"/>

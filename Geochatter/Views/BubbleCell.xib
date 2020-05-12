@@ -6,39 +6,69 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BubbleCell" customModule="Geochatter" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bubbleCell" rowHeight="145" translatesAutoresizingMaskIntoConstraints="NO" id="14S-07-Xas" customClass="BubbleCell" customModule="Geochatter" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="145"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="14S-07-Xas" translatesAutoresizingMaskIntoConstraints="NO" id="2Zc-jE-2TA">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="145"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bubbleCell" rowHeight="103" id="14S-07-Xas" customClass="BubbleCell" customModule="Geochatter" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="14S-07-Xas" translatesAutoresizingMaskIntoConstraints="NO" id="2Zc-jE-2TA">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBN-D3-P9H">
                         <rect key="frame" x="20" y="20" width="52" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="JNn-us-ya3"/>
+                            <constraint firstAttribute="width" constant="52" id="m1w-Fr-8cZ"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="zcp-Gc-cx8"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBy-Tz-ZOC">
-                        <rect key="frame" x="20" y="48" width="33" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBy-Tz-ZOC">
+                        <rect key="frame" x="20" y="48" width="374" height="46"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="46" id="t3V-zy-Rp7"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date/Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IjN-Ow-6Sd">
+                        <rect key="frame" x="327" y="22" width="67" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="17" id="3pY-zz-SfG"/>
+                            <constraint firstAttribute="height" constant="17" id="Hdw-xe-M84"/>
+                            <constraint firstAttribute="width" constant="67" id="viJ-bh-GKA"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="SBN-D3-P9H" firstAttribute="leading" secondItem="2Zc-jE-2TA" secondAttribute="leading" constant="20" id="29b-rJ-8SZ"/>
-                    <constraint firstItem="SBN-D3-P9H" firstAttribute="top" secondItem="2Zc-jE-2TA" secondAttribute="top" constant="20" id="VM8-1Z-W9N"/>
-                    <constraint firstAttribute="width" constant="414" id="a4h-dx-a3J"/>
-                    <constraint firstAttribute="height" constant="145" id="xVf-Qf-k2B"/>
+                    <constraint firstItem="BBy-Tz-ZOC" firstAttribute="top" secondItem="SBN-D3-P9H" secondAttribute="bottom" constant="7" id="2HM-wo-O37"/>
+                    <constraint firstAttribute="trailing" secondItem="BBy-Tz-ZOC" secondAttribute="trailing" constant="20" id="2kZ-aP-USq"/>
+                    <constraint firstAttribute="bottom" secondItem="IjN-Ow-6Sd" secondAttribute="bottom" constant="66" id="GRY-0p-Pjq"/>
+                    <constraint firstAttribute="trailing" secondItem="IjN-Ow-6Sd" secondAttribute="trailing" constant="20" id="MRi-cp-kdP"/>
+                    <constraint firstItem="IjN-Ow-6Sd" firstAttribute="top" secondItem="2Zc-jE-2TA" secondAttribute="top" constant="22" id="NqV-5O-1r1"/>
+                    <constraint firstItem="SBN-D3-P9H" firstAttribute="leading" secondItem="2Zc-jE-2TA" secondAttribute="leading" constant="20" id="jxn-rF-4rF"/>
+                    <constraint firstItem="BBy-Tz-ZOC" firstAttribute="leading" secondItem="2Zc-jE-2TA" secondAttribute="leading" constant="20" id="lLQ-3U-Uyg"/>
+                    <constraint firstItem="SBN-D3-P9H" firstAttribute="top" secondItem="2Zc-jE-2TA" secondAttribute="top" constant="20" id="rig-2R-zYK"/>
                 </constraints>
             </tableViewCellContentView>
+            <constraints>
+                <constraint firstItem="2Zc-jE-2TA" firstAttribute="top" secondItem="14S-07-Xas" secondAttribute="top" id="1Jw-do-qUZ"/>
+                <constraint firstAttribute="bottom" secondItem="2Zc-jE-2TA" secondAttribute="bottom" id="Xwq-o8-wJz"/>
+                <constraint firstItem="2Zc-jE-2TA" firstAttribute="leading" secondItem="14S-07-Xas" secondAttribute="leading" id="suD-E7-hde"/>
+                <constraint firstAttribute="trailing" secondItem="2Zc-jE-2TA" secondAttribute="trailing" id="uJG-V3-3o9"/>
+            </constraints>
             <connections>
                 <outlet property="authorLabel" destination="SBN-D3-P9H" id="CYA-n7-G8h"/>
                 <outlet property="chatterLabel" destination="BBy-Tz-ZOC" id="dbs-hm-wK8"/>
+                <outlet property="dateTimeLabel" destination="IjN-Ow-6Sd" id="exb-kh-D4K"/>
             </connections>
-            <point key="canvasLocation" x="50.724637681159422" y="40.513392857142854"/>
+            <point key="canvasLocation" x="50.724637681159422" y="26.450892857142858"/>
         </tableViewCell>
     </objects>
 </document>

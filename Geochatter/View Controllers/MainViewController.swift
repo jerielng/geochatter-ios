@@ -103,6 +103,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         chatTableView.dataSource = self
         chatTableView.register(UINib(nibName: "BubbleCell", bundle: nil),
                                forCellReuseIdentifier: BubbleCell.reuseIdentifier)
+        chatTableView.insetsContentViewsToSafeArea = true
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
