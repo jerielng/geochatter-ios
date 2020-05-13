@@ -67,8 +67,8 @@ extension MainViewController: CLLocationManagerDelegate {
         case .notDetermined:
             locationService.requestPermissions()
         case .denied, .restricted:
-            present(UIAlertController(title: "Location Permissions Not Allowed",
-                                      message: "Please enable location services in system settings to make full use of Geochatter",
+            present(UIAlertController(title: GlobalStrings.locationNotEnabledTitle,
+                                      message: GlobalStrings.locationNotEnabledMessage,
                                       preferredStyle: .alert), animated: false)
         case .authorizedAlways, .authorizedWhenInUse:
             break
@@ -101,7 +101,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         chatTableView.backgroundColor = GlobalColors.tableViewCellColor
         chatTableView.delegate = self
         chatTableView.dataSource = self
-        chatTableView.register(UINib(nibName: "BubbleCell", bundle: nil),
+        chatTableView.register(UINib(nibName: BubbleCell.nibName, bundle: nil),
                                forCellReuseIdentifier: BubbleCell.reuseIdentifier)
         chatTableView.insetsContentViewsToSafeArea = true
     }

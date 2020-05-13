@@ -12,6 +12,8 @@ struct GlobalStrings {
     static let takePhotoButton = "Take a Photo"
     static let choosePhotoButton = "Choose from Photo Library"
     static let cancel = "Cancel"
+    static let locationNotEnabledTitle = "Location Permissions Not Allowed"
+    static let locationNotEnabledMessage = "Please enable location services in system settings to make full use of Geochatter"
 }
 
 // MARK: - Firebase Constants

@@ -10,6 +10,7 @@ import UIKit
 
 class BubbleCell: UITableViewCell {
     static let reuseIdentifier = "bubbleCell"
+    static let nibName = "BubbleCell"
 
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var chatterLabel: UILabel!
