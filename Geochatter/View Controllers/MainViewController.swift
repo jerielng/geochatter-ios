@@ -120,6 +120,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         cell.chatterLabel.text = bubbleManager.getCurrentBubbles()[indexPath.row].chatterText
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let bubble = bubbleManager.getCurrentBubbles()[indexPath.row]
+    }
 
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return bubbleManager.getCurrentBubbles()[indexPath.row].authorId == userManager.getCurrentUser().getId()

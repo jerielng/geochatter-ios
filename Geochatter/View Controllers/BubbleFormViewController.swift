@@ -9,7 +9,6 @@
 import UIKit
 
 class BubbleFormViewController: UIViewController {
-    @IBOutlet weak var headerText: UITextView!
     @IBOutlet weak var bubbleEntryTextField: UITextField!
     @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var attachImageButton: UIButton!
@@ -18,14 +17,9 @@ class BubbleFormViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpHeaderText()
         setUpImagePickerController()
         setUpAttachImageButton()
         setUpPostButton()
-    }
-
-    private func setUpHeaderText() {
-        headerText.text = GlobalStrings.bubbleInputPrompt
     }
 
     private func setUpAttachImageButton() {

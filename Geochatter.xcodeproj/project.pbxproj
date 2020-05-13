@@ -23,6 +23,7 @@
 		EC385D6923B82CD600EFFD76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC385D6823B82CD600EFFD76 /* SceneDelegate.swift */; };
 		EC385D6B23B82CD600EFFD76 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC385D6A23B82CD600EFFD76 /* MainViewController.swift */; };
 		EC385D7023B82CD800EFFD76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC385D6F23B82CD800EFFD76 /* Assets.xcassets */; };
+		EC53FC25246BAD9100EF4607 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC53FC24246BAD9100EF4607 /* MapKit.framework */; };
 		EC549D9E242598AB003CAF0A /* BubbleFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC549D9D242598AB003CAF0A /* BubbleFormViewController.xib */; };
 		EC549DA0242598BA003CAF0A /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC549D9F242598BA003CAF0A /* MainViewController.xib */; };
 		EC70B45B2464CD5B005E3C76 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70B45A2464CD5B005E3C76 /* LocationService.swift */; };
@@ -56,6 +57,7 @@
 		EC385D6A23B82CD600EFFD76 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EC385D6F23B82CD800EFFD76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC385D7423B82CD800EFFD76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC53FC24246BAD9100EF4607 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EC549D9D242598AB003CAF0A /* BubbleFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BubbleFormViewController.xib; sourceTree = "<group>"; };
 		EC549D9F242598BA003CAF0A /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		EC70B45A2464CD5B005E3C76 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC53FC25246BAD9100EF4607 /* MapKit.framework in Frameworks */,
 				339A24F698DD0D2CD5A09111 /* Pods_Geochatter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +97,7 @@
 		DC0FE9ED685943CF991E3F40 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EC53FC24246BAD9100EF4607 /* MapKit.framework */,
 				DB35E617304A4B2CD105F683 /* Pods_Geochatter.framework */,
 			);
 			name = Frameworks;
