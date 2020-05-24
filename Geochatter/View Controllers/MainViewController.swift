@@ -120,7 +120,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         cell.chatterLabel.text = bubbleManager.getCurrentBubbles()[indexPath.row].chatterText
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let bubble = bubbleManager.getCurrentBubbles()[indexPath.row]
     }

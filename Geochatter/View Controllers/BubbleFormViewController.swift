@@ -11,6 +11,7 @@ import UIKit
 class BubbleFormViewController: UIViewController {
     @IBOutlet weak var bubbleEntryTextField: UITextField!
     @IBOutlet weak var postButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var attachImageButton: UIButton!
 
     var imagePickerController: UIImagePickerController!
@@ -20,10 +21,11 @@ class BubbleFormViewController: UIViewController {
         setUpImagePickerController()
         setUpAttachImageButton()
         setUpPostButton()
+        setUpCancelButton()
     }
 
     private func setUpAttachImageButton() {
-        attachImageButton.addTarget(self, action: #selector(attachImageButtonClicked), for: UIControl.Event.touchUpInside)
+        attachImageButton.addTarget(self, action: #selector(attachImageButtonClicked), for: .touchUpInside)
     }
 
     private func setUpImagePickerController() {
@@ -31,7 +33,11 @@ class BubbleFormViewController: UIViewController {
     }
 
     private func setUpPostButton() {
-        postButton.addTarget(self, action: #selector(postButtonClicked), for: UIControl.Event.touchUpInside)
+        postButton.addTarget(self, action: #selector(postButtonClicked), for: .touchUpInside)
+    }
+
+    private func setUpCancelButton() {
+        cancelButton.addTarget(self, action: #selector(cancelButtonClicked), for: .touchUpInside)
     }
 
     @IBAction private func attachImageButtonClicked() {
@@ -58,5 +64,9 @@ class BubbleFormViewController: UIViewController {
         guard let bubbleText = bubbleEntryTextField.text else { return }
         BubbleManager.sharedInstance.createNewBubble(with: bubbleText)
         dismiss(animated: true, completion: nil)
+    }
+
+    @IBAction private func cancelButtonClicked() {
+        self.dismiss(animated: true, completion: nil)
     }
 }
