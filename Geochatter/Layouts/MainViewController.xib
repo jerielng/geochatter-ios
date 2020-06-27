@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -11,7 +11,6 @@
             <connections>
                 <outlet property="chatTableView" destination="qLv-0c-Q6M" id="xe5-JH-Pdu"/>
                 <outlet property="mapView" destination="gPR-YC-bAH" id="fjM-WP-GXH"/>
-                <outlet property="navBar" destination="k1T-9e-Zp2" id="XfG-8l-fmJ"/>
                 <outlet property="view" destination="07h-F1-Upg" id="c1y-r9-kVK"/>
             </connections>
         </placeholder>
@@ -21,35 +20,25 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gPR-YC-bAH">
-                    <rect key="frame" x="0.0" y="44" width="414" height="438"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="390"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="438" id="uzb-qJ-DPH"/>
+                        <constraint firstAttribute="height" constant="390" id="uzb-qJ-DPH"/>
                     </constraints>
                 </mapView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLv-0c-Q6M">
-                    <rect key="frame" x="0.0" y="482" width="414" height="414"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qLv-0c-Q6M">
+                    <rect key="frame" x="0.0" y="434" width="414" height="462"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k1T-9e-Zp2" userLabel="Navigation Bar">
-                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                    <items>
-                        <navigationItem title="Title" id="GH0-Ap-CZ2"/>
-                    </items>
-                </navigationBar>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="qLv-0c-Q6M" firstAttribute="trailing" secondItem="oPq-eH-gYI" secondAttribute="trailing" id="5Wk-aq-cC2"/>
-                <constraint firstItem="k1T-9e-Zp2" firstAttribute="top" secondItem="oPq-eH-gYI" secondAttribute="top" id="B91-1y-aHM"/>
-                <constraint firstItem="gPR-YC-bAH" firstAttribute="top" secondItem="oPq-eH-gYI" secondAttribute="top" id="NeE-nK-O4e"/>
+                <constraint firstItem="gPR-YC-bAH" firstAttribute="top" secondItem="oPq-eH-gYI" secondAttribute="top" id="EUw-CM-tfN"/>
                 <constraint firstAttribute="bottom" secondItem="qLv-0c-Q6M" secondAttribute="bottom" id="VwR-zU-HGx"/>
-                <constraint firstItem="k1T-9e-Zp2" firstAttribute="trailing" secondItem="oPq-eH-gYI" secondAttribute="trailing" id="WHc-vt-TdA"/>
                 <constraint firstItem="qLv-0c-Q6M" firstAttribute="top" secondItem="gPR-YC-bAH" secondAttribute="bottom" id="YOm-AX-tnP"/>
                 <constraint firstItem="qLv-0c-Q6M" firstAttribute="leading" secondItem="oPq-eH-gYI" secondAttribute="leading" id="g3P-qG-S9b"/>
-                <constraint firstItem="k1T-9e-Zp2" firstAttribute="top" secondItem="oPq-eH-gYI" secondAttribute="top" id="l4p-l5-QNG"/>
                 <constraint firstItem="gPR-YC-bAH" firstAttribute="leading" secondItem="oPq-eH-gYI" secondAttribute="leading" id="lSJ-H3-zWC"/>
                 <constraint firstItem="oPq-eH-gYI" firstAttribute="trailing" secondItem="gPR-YC-bAH" secondAttribute="trailing" id="mFL-gy-Mwm"/>
-                <constraint firstItem="k1T-9e-Zp2" firstAttribute="leading" secondItem="oPq-eH-gYI" secondAttribute="leading" id="wId-DB-n3l"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="oPq-eH-gYI"/>
             <point key="canvasLocation" x="74" y="38"/>

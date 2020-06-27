@@ -40,7 +40,8 @@ class BubbleFormViewController: UIViewController {
         cancelButton.addTarget(self, action: #selector(cancelButtonClicked), for: .touchUpInside)
     }
 
-    @IBAction private func attachImageButtonClicked() {
+    @objc
+    private func attachImageButtonClicked() {
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
 
         alert.addAction(UIAlertAction(title: GlobalStrings.takePhotoButton, style: .default) { [weak self] _ in
@@ -60,13 +61,15 @@ class BubbleFormViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
 
-    @IBAction private func postButtonClicked() {
+    @objc
+    private func postButtonClicked() {
         guard let bubbleText = bubbleEntryTextField.text else { return }
         BubbleManager.sharedInstance.createNewBubble(with: bubbleText)
         dismiss(animated: true, completion: nil)
     }
 
-    @IBAction private func cancelButtonClicked() {
+    @objc
+    private func cancelButtonClicked() {
         self.dismiss(animated: true, completion: nil)
     }
 }

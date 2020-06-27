@@ -13,7 +13,6 @@ import MapKit
 class MainViewController: UIViewController {
     @IBOutlet weak var chatTableView: UITableView!
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var navBar: UINavigationBar!
 
     private let bubbleManager = BubbleManager.sharedInstance
     private let userManager = UserManager.sharedInstance
@@ -30,7 +29,7 @@ class MainViewController: UIViewController {
         setUpLocationService()
         setUpMapView()
         setUpTableView()
-        setUpNavBar()
+        updateNavBar()
     }
 
     private func setUpLocationService() {
@@ -40,14 +39,14 @@ class MainViewController: UIViewController {
         locationService.setLocationDelegate(delegate: self)
     }
 
-    private func setUpNavBar() {
-        guard let navBarItem = navBar.topItem else { return }
-        navBar.backgroundColor = GlobalColors.navBarColor
+    private func updateNavBar() {
+        guard let navBarItem = navigationController?.navigationBar.topItem else { return }
         navBarItem.title = GlobalStrings.mainVCTitle
         navBarItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonClicked))
     }
 
-    @IBAction private func addButtonClicked() {
+    @objc
+    private func addButtonClicked() {
         let bubbleFormVC = BubbleFormViewController()
         self.present(bubbleFormVC, animated: true, completion: nil)
     }
@@ -123,6 +122,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let bubble = bubbleManager.getCurrentBubbles()[indexPath.row]
+        tableView.deselectRow(at: indexPath, animated: false)
     }
 
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -132,6 +132,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
         }
+        tableView.reloadData()
     }
 }
 
