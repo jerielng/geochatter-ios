@@ -34,6 +34,7 @@
 		ECDAD904246B90900074B5E9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDAD903246B90900074B5E9 /* LoginViewController.swift */; };
 		ECDAD906246B913D0074B5E9 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECDAD905246B913D0074B5E9 /* LoginViewController.xib */; };
 		ECE05CDF23B83A20005974C4 /* GlobalKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECE05CDE23B83A20005974C4 /* GlobalKeys.plist */; };
+		ECFEB65224AAF55D005471DD /* GCTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFEB65124AAF55D005471DD /* GCTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		ECDAD903246B90900074B5E9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ECDAD905246B913D0074B5E9 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		ECE05CDE23B83A20005974C4 /* GlobalKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GlobalKeys.plist; sourceTree = "<group>"; };
+		ECFEB65124AAF55D005471DD /* GCTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCTabBarController.swift; sourceTree = "<group>"; };
 		F89E5F669ADC07B6C3E8B65C /* Pods-Geochatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geochatter.release.xcconfig"; path = "Target Support Files/Pods-Geochatter/Pods-Geochatter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,6 +176,7 @@
 			children = (
 				EC385D6623B82CD600EFFD76 /* AppDelegate.swift */,
 				EC2E873824A9656D00ABE391 /* GCNavigationController.swift */,
+				ECFEB65124AAF55D005471DD /* GCTabBarController.swift */,
 				EC385D6823B82CD600EFFD76 /* SceneDelegate.swift */,
 			);
 			path = "Application Control";
@@ -363,6 +366,7 @@
 				EC2399E5246786DC006F5FCC /* UpdateDelegate.swift in Sources */,
 				EC385D6923B82CD600EFFD76 /* SceneDelegate.swift in Sources */,
 				EC70B45B2464CD5B005E3C76 /* LocationService.swift in Sources */,
+				ECFEB65224AAF55D005471DD /* GCTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,14 +20,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gPR-YC-bAH">
-                    <rect key="frame" x="0.0" y="44" width="414" height="390"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="390" id="uzb-qJ-DPH"/>
-                    </constraints>
+                    <rect key="frame" x="0.0" y="44" width="414" height="392"/>
                 </mapView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qLv-0c-Q6M">
-                    <rect key="frame" x="0.0" y="434" width="414" height="462"/>
+                    <rect key="frame" x="0.0" y="436" width="414" height="460"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="460" id="Ipp-nh-a1o"/>
+                    </constraints>
                 </tableView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

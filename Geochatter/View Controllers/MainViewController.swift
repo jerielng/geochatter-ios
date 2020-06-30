@@ -97,7 +97,6 @@ extension MainViewController: MKMapViewDelegate {
 // MARK: - UITableViewDelegate
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     private func setUpTableView() {
-        chatTableView.backgroundColor = GlobalColors.tableViewParentColor
         chatTableView.separatorColor = GlobalColors.appSeparatorColor
         chatTableView.delegate = self
         chatTableView.dataSource = self
@@ -118,7 +117,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: BubbleCell.reuseIdentifier) as! BubbleCell
         cell.authorLabel.text = bubbleManager.getCurrentBubbles()[indexPath.row].authorId
         cell.chatterLabel.text = bubbleManager.getCurrentBubbles()[indexPath.row].chatterText
-        cell.backgroundColor = GlobalColors.tableViewCellColor
         return cell
     }
 
