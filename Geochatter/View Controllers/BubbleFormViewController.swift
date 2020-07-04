@@ -9,19 +9,26 @@
 import UIKit
 
 class BubbleFormViewController: UIViewController {
-    @IBOutlet weak var bubbleEntryTextField: UITextField!
+    @IBOutlet weak var bubbleEntryTextView: UITextView!
     @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var attachImageButton: UIButton!
 
     var imagePickerController: UIImagePickerController!
 
+    private var hasTextViewBeenEdited: Bool = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpImagePickerController()
+        setUpTextView()
         setUpAttachImageButton()
+        setUpImagePickerController()
         setUpPostButton()
         setUpCancelButton()
+    }
+
+    private func setUpTextView() {
+        bubbleEntryTextView.delegate = self
     }
 
     private func setUpAttachImageButton() {
@@ -63,7 +70,7 @@ class BubbleFormViewController: UIViewController {
 
     @objc
     private func postButtonClicked() {
-        guard let bubbleText = bubbleEntryTextField.text else { return }
+        guard let bubbleText = bubbleEntryTextView.text else { return }
         BubbleManager.sharedInstance.createNewBubble(with: bubbleText)
         dismiss(animated: true, completion: nil)
     }
@@ -71,5 +78,13 @@ class BubbleFormViewController: UIViewController {
     @objc
     private func cancelButtonClicked() {
         self.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension BubbleFormViewController: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        guard !hasTextViewBeenEdited else { return }
+        hasTextViewBeenEdited = true
+        textView.text = ""
     }
 }

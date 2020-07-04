@@ -10,7 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BubbleFormViewController" customModule="Geochatter" customModuleProvider="target">
             <connections>
                 <outlet property="attachImageButton" destination="4qi-ee-cg3" id="Xg0-1t-cqw"/>
-                <outlet property="bubbleEntryTextField" destination="vK1-pD-Rkg" id="doH-Yr-5Fj"/>
+                <outlet property="bubbleEntryTextView" destination="b0a-H4-kNE" id="1un-SN-d5k"/>
                 <outlet property="cancelButton" destination="ZSP-DV-OVE" id="PDg-9u-xh5"/>
                 <outlet property="postButton" destination="NaM-C8-cjP" id="QlH-rR-pZf"/>
                 <outlet property="view" destination="iN0-l3-epB" id="SVu-iB-tsJ"/>
@@ -21,15 +21,16 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" placeholder="What would you like to say?" textAlignment="justified" adjustsFontSizeToFit="NO" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vK1-pD-Rkg">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What would you like to say?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b0a-H4-kNE">
                     <rect key="frame" x="0.0" y="96" width="414" height="300"/>
-                    <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="300" id="cl7-ha-gPK"/>
+                        <constraint firstAttribute="height" constant="300" id="5cd-uo-pR7"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" enablesReturnKeyAutomatically="YES"/>
-                </textField>
+                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qi-ee-cg3">
                     <rect key="frame" x="156" y="404" width="102" height="30"/>
                     <constraints>
@@ -54,16 +55,15 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="vK1-pD-Rkg" firstAttribute="top" secondItem="ZSP-DV-OVE" secondAttribute="bottom" constant="8" id="129-Tr-y3Q"/>
-                <constraint firstItem="4qi-ee-cg3" firstAttribute="top" secondItem="vK1-pD-Rkg" secondAttribute="bottom" constant="8" id="3zV-K3-Psa"/>
                 <constraint firstItem="NaM-C8-cjP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="5ob-3G-bzu"/>
+                <constraint firstItem="b0a-H4-kNE" firstAttribute="top" secondItem="ZSP-DV-OVE" secondAttribute="bottom" constant="8" id="8LE-Jc-6VK"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="NaM-C8-cjP" secondAttribute="trailing" constant="20" id="C1f-vK-Mkt"/>
-                <constraint firstItem="vK1-pD-Rkg" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="DH2-yz-e6K"/>
                 <constraint firstItem="ZSP-DV-OVE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="FQs-Tm-Yx9"/>
-                <constraint firstItem="vK1-pD-Rkg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Fmk-8d-YCC"/>
+                <constraint firstItem="b0a-H4-kNE" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="InX-yg-srX"/>
+                <constraint firstItem="b0a-H4-kNE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="XbH-MR-vKT"/>
                 <constraint firstItem="4qi-ee-cg3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="aFV-Lv-2Sg"/>
-                <constraint firstItem="vK1-pD-Rkg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="52" id="e8R-WV-feB"/>
                 <constraint firstItem="ZSP-DV-OVE" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="eHh-RW-1f4"/>
+                <constraint firstItem="4qi-ee-cg3" firstAttribute="top" secondItem="b0a-H4-kNE" secondAttribute="bottom" constant="8" id="vcz-Hh-EnJ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="137.68115942028987" y="87.723214285714278"/>
