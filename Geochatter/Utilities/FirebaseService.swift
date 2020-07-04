@@ -7,6 +7,7 @@
 //
 
 import Firebase
+import FirebaseFirestore
 
 class FirebaseService {
     static let sharedInstance = FirebaseService()
