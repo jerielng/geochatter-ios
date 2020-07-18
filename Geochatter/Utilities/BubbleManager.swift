@@ -18,12 +18,13 @@ class BubbleManager {
     func createNewBubble(with text: String) {
         guard let location = LocationService.sharedInstance.getCurrentLocation() else { return }
         let userId: String = UserManager.sharedInstance.getCurrentUser().getId()
-        let bubble = Bubble(authorId: userId,
+        let bubble = Bubble(bubbleId: nil,
+                            authorId: userId,
                             chatterText: text,
                             dateTime: FormatterUtils.getCurrentDate(),
                             coordinateLat: FormatterUtils.roundLocationValue(value: location.coordinate.latitude),
                             coordinateLng: FormatterUtils.roundLocationValue(value: location.coordinate.longitude))
-        FirebaseService.sharedInstance.uploadBubble(bubble)
+        FirebaseService.sharedInstance.postBubble(bubble)
     }
 
     func getCurrentBubbles() -> [Bubble] {
@@ -41,7 +42,8 @@ class BubbleManager {
             !LocationService.sharedInstance.isLocationDifferent(latitude: latitude, longitude: longitude),
             let authorId = dictionary[GlobalStrings.authorField] as? String,
             let chatterText = dictionary[GlobalStrings.textField] as? String else { return nil }
-        return Bubble(authorId: authorId,
+        return Bubble(bubbleId: nil,
+                      authorId: authorId,
                       chatterText: chatterText,
                       dateTime: FormatterUtils.getCurrentDate(),
                       coordinateLat: latitude,

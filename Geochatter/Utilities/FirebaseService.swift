@@ -21,29 +21,42 @@ class FirebaseService {
         database = Firestore.firestore()
     }
 
-    func uploadBubble(_ bubble: Bubble) {
-        var _: DocumentReference? = database?.collection(
-            GlobalStrings.bubblesCollection).addDocument(data: [
+    func downloadBubbles() {
+        database?
+            .collection(GlobalStrings.bubblesCollection)
+            .getDocuments(completion: { querySnapshot, error in
+                guard error == nil, let documents = querySnapshot?.documents else { return }
+                var bubblesArray = [Bubble]()
+                for document in documents {
+                    guard let bubble = BubbleManager.sharedInstance.parseBubbleFields(from: document.data()) else { continue }
+                    bubblesArray.append(bubble)
+                }
+                BubbleManager.sharedInstance.updateCurrentBubbles(currentBubbles: bubblesArray)
+            })
+    }
+
+    func postBubble(_ bubble: Bubble) {
+        database?
+            .collection(GlobalStrings.bubblesCollection)
+            .addDocument(data: [
                 GlobalStrings.authorField: "\(bubble.authorId)",
                 GlobalStrings.textField: "\(bubble.chatterText)",
                 GlobalStrings.latitudeField: "\(bubble.coordinateLat)",
                 GlobalStrings.longitudeField: "\(bubble.coordinateLng)"
                 ],
-                                                         completion: { [weak self] error in
-                                                            guard error == nil else { return }
-                                                            self?.downloadBubbles()
+                         completion: { [weak self] error in
+                            guard error == nil else { return }
+                            self?.downloadBubbles()
             })
     }
 
-    func downloadBubbles() {
-        database?.collection(GlobalStrings.bubblesCollection).getDocuments(completion: { querySnapshot, error in
-            guard error == nil, let documents = querySnapshot?.documents else { return }
-            var bubblesArray = [Bubble]()
-            for document in documents {
-                guard let bubble = BubbleManager.sharedInstance.parseBubbleFields(from: document.data()) else { continue }
-                bubblesArray.append(bubble)
+    func deleteBubble(_ bubble: Bubble) {
+        guard let documentId = bubble.bubbleId else { return }
+        database?
+            .collection(GlobalStrings.bubblesCollection)
+            .document(documentId)
+            .delete { [weak self] error in
+                guard let _ = error else { return }
             }
-            BubbleManager.sharedInstance.updateCurrentBubbles(currentBubbles: bubblesArray)
-        })
     }
 }
