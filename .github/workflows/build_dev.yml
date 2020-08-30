@@ -15,4 +15,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           xcodebuild clean -workspace Geochatter.xcworkspace -scheme Geochatter
-          xcodebuild build -workspace Geochatter.xcworkspace -scheme Geochatter CODE_SIGN_IDENTITY="" CODE_SIGN_ENTITLEMENTS="" CODE_SIGNING_REQUIRED=NO
+          xcodebuild build -workspace Geochatter.xcworkspace -scheme Geochatter CODE_SIGN_IDENTITY="" CODE_SIGN_ENTITLEMENTS="" CODE_SIGNING_ALLOWED="NO" CODE_SIGNING_REQUIRED="NO"
