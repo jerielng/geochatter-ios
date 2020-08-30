@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Run a multi-line script
+      - name: Clean and build debug version of app
         run: |
           xcodebuild clean -workspace Geochatter.xcworkspace -scheme Geochatter
           xcodebuild build -workspace Geochatter.xcworkspace -scheme Geochatter CODE_SIGN_IDENTITY="" CODE_SIGN_ENTITLEMENTS="" CODE_SIGNING_ALLOWED="NO" CODE_SIGNING_REQUIRED="NO"
