@@ -14,5 +14,5 @@ jobs:
 
       - name: Run a multi-line script
         run: |
-          xcodebuild clean -workspace Geochatter.xcworkspace -scheme
+          xcodebuild clean -workspace Geochatter.xcworkspace -scheme Geochatter
           xcodebuild build -workspace Geochatter.xcworkspace -scheme Geochatter
