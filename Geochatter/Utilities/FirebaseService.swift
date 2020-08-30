@@ -6,7 +6,7 @@
 //  Copyright © 2019 Jeriel Ng. All rights reserved.
 //
 
-import Firebase
+import FirebaseCore
 import FirebaseFirestore
 
 class FirebaseService {
