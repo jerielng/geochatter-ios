@@ -12,7 +12,19 @@ class GCTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBar.barTintColor = GlobalColors.tabBarColor
-nController(rootViewController: MainViewController())
+
+        setUpViewControllers()
+    }
+
+    private func setUpViewControllers() {
+        var viewControllers = [UIViewController]()
+        viewControllers.append(createNearbyController())
+        viewControllers.append(createMyPostsController())
+        setViewControllers(viewControllers, animated: false)
+    }
+
+    private func createNearbyController() -> UIViewController {
+        let nearbyController = GCNavigationController(rootViewController: MainViewController())
         nearbyController.tabBarItem = UITabBarItem(title: "Nearby", image: nil, selectedImage: nil)
         return nearbyController
     }
