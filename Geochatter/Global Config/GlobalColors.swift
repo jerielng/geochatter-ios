@@ -9,8 +9,8 @@
 import UIKit
 
 class GlobalColors {
-    static let primary = UIColor(red: 0.922, green: 0.431, blue: 0.129, alpha: 1)
-    static let secondary = UIColor(red: 0.235, green: 0.467, blue: 0.4, alpha: 1)
+    static let primary = UIColor(red: 0.0, green: 0.216, blue: 0.537, alpha: 1)
+    static let secondary = UIColor(red: 0.0039, green: 0.898, blue: 0.094, alpha: 1)
 
     static let appBackgroundColor = UIColor.black
     static let appSeparatorColor = GlobalColors.secondary
