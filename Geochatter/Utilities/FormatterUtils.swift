@@ -8,7 +8,7 @@
 
 import Foundation
 
-//MARK: - Date Formatting
+// MARK: - Date Formatting
 class FormatterUtils {
     lazy var dateFormatter = DateFormatter()
 
