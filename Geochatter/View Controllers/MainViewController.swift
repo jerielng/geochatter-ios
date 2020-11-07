@@ -33,10 +33,8 @@ class MainViewController: UIViewController {
     }
 
     private func setUpLocationService() {
-        if CLLocationManager.locationServicesEnabled() {
-            self.requestLocationPermissions()
-        }
         locationService.setLocationDelegate(delegate: self)
+        locationService.requestPermissions()
     }
 
     private func updateNavBar() {
@@ -61,8 +59,8 @@ extension MainViewController: CLLocationManagerDelegate {
         FirebaseService.sharedInstance.downloadBubbles()
     }
 
-    private func requestLocationPermissions() {
-        switch CLLocationManager.authorizationStatus() {
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        switch manager.authorizationStatus {
         case .notDetermined:
             locationService.requestPermissions()
         case .denied, .restricted:
