@@ -11,8 +11,6 @@ import UIKit
 class GCTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBar.barTintColor = GlobalColors.tabBarColor
-
         setUpViewControllers()
     }
 
@@ -25,13 +23,13 @@ class GCTabBarController: UITabBarController {
 
     private func createNearbyController() -> UIViewController {
         let nearbyController = GCNavigationController(rootViewController: MainViewController())
-        nearbyController.tabBarItem = UITabBarItem(title: "Nearby", image: nil, selectedImage: nil)
+        nearbyController.tabBarItem = UITabBarItem(title: GlobalStrings.barItemNearby, image: nil, selectedImage: nil)
         return nearbyController
     }
 
     private func createMyPostsController() -> UIViewController {
-        let loginController = BubbleFormViewController()
-        loginController.tabBarItem = UITabBarItem(title: "My Posts", image: nil, selectedImage: nil)
-        return loginController
+        let myPostsController = GCNavigationController(rootViewController: MyPostsViewController())
+        myPostsController.tabBarItem = UITabBarItem(title: GlobalStrings.barItemMyPosts, image: nil, selectedImage: nil)
+        return myPostsController
     }
 }

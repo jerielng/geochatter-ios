@@ -12,6 +12,7 @@
 		EC05AD8A23B85D0D006A8473 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC05AD8923B85D0D006A8473 /* FirebaseService.swift */; };
 		EC1467EE240A164D006B350D /* BubbleAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1467ED240A164D006B350D /* BubbleAuthor.swift */; };
 		EC1467F0240A1756006B350D /* BubbleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1467EF240A1756006B350D /* BubbleCell.swift */; };
+		EC1C1DC8255711CE0053271A /* MyPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1C1DC7255711CE0053271A /* MyPostsViewController.swift */; };
 		EC20805923B83BE70074B9C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC20805823B83BE70074B9C2 /* GoogleService-Info.plist */; };
 		EC2399E324677B6B006F5FCC /* BubbleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2399E224677B6B006F5FCC /* BubbleCell.xib */; };
 		EC2399E5246786DC006F5FCC /* UpdateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2399E4246786DC006F5FCC /* UpdateDelegate.swift */; };
@@ -30,10 +31,12 @@
 		EC70B45F2464CDDC005E3C76 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70B45E2464CDDC005E3C76 /* UserManager.swift */; };
 		EC70B4612464CE12005E3C76 /* FormatterUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70B4602464CE12005E3C76 /* FormatterUtils.swift */; };
 		EC79A28F2427396200E42D89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC79A28E2427396200E42D89 /* LaunchScreen.storyboard */; };
-		EC8C4A1F23B835FE00C0D208 /* GlobalColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8C4A1E23B835FE00C0D208 /* GlobalColors.swift */; };
+		EC8C4A1F23B835FE00C0D208 /* GlobalColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8C4A1E23B835FE00C0D208 /* GlobalColor.swift */; };
 		ECDAD904246B90900074B5E9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDAD903246B90900074B5E9 /* LoginViewController.swift */; };
 		ECDAD906246B913D0074B5E9 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECDAD905246B913D0074B5E9 /* LoginViewController.xib */; };
 		ECE05CDF23B83A20005974C4 /* GlobalKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECE05CDE23B83A20005974C4 /* GlobalKeys.plist */; };
+		ECE59C2A25574EB900EAD4B7 /* MyPostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECE59C2925574EB900EAD4B7 /* MyPostsViewController.xib */; };
+		ECE59C2D2557515000EAD4B7 /* GlobalTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE59C2C2557515000EAD4B7 /* GlobalTheme.swift */; };
 		ECFEB65224AAF55D005471DD /* GCTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFEB65124AAF55D005471DD /* GCTabBarController.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +47,7 @@
 		EC05AD8923B85D0D006A8473 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		EC1467ED240A164D006B350D /* BubbleAuthor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleAuthor.swift; sourceTree = "<group>"; };
 		EC1467EF240A1756006B350D /* BubbleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleCell.swift; sourceTree = "<group>"; };
+		EC1C1DC7255711CE0053271A /* MyPostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostsViewController.swift; sourceTree = "<group>"; };
 		EC20805823B83BE70074B9C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EC2399E224677B6B006F5FCC /* BubbleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BubbleCell.xib; sourceTree = "<group>"; };
 		EC2399E4246786DC006F5FCC /* UpdateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDelegate.swift; sourceTree = "<group>"; };
@@ -64,10 +68,12 @@
 		EC70B45E2464CDDC005E3C76 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		EC70B4602464CE12005E3C76 /* FormatterUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterUtils.swift; sourceTree = "<group>"; };
 		EC79A28E2427396200E42D89 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		EC8C4A1E23B835FE00C0D208 /* GlobalColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalColors.swift; sourceTree = "<group>"; };
+		EC8C4A1E23B835FE00C0D208 /* GlobalColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalColor.swift; sourceTree = "<group>"; };
 		ECDAD903246B90900074B5E9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ECDAD905246B913D0074B5E9 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		ECE05CDE23B83A20005974C4 /* GlobalKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GlobalKeys.plist; sourceTree = "<group>"; };
+		ECE59C2925574EB900EAD4B7 /* MyPostsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPostsViewController.xib; sourceTree = "<group>"; };
+		ECE59C2C2557515000EAD4B7 /* GlobalTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalTheme.swift; sourceTree = "<group>"; };
 		ECFEB65124AAF55D005471DD /* GCTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCTabBarController.swift; sourceTree = "<group>"; };
 		F89E5F669ADC07B6C3E8B65C /* Pods-Geochatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geochatter.release.xcconfig"; path = "Target Support Files/Pods-Geochatter/Pods-Geochatter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,6 +181,7 @@
 				EC79A28E2427396200E42D89 /* LaunchScreen.storyboard */,
 				ECDAD905246B913D0074B5E9 /* LoginViewController.xib */,
 				EC549D9F242598BA003CAF0A /* MainViewController.xib */,
+				ECE59C2925574EB900EAD4B7 /* MyPostsViewController.xib */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -196,6 +203,7 @@
 				EC2BC3902416057700F1269B /* BubbleFormViewController.swift */,
 				ECDAD903246B90900074B5E9 /* LoginViewController.swift */,
 				EC385D6A23B82CD600EFFD76 /* MainViewController.swift */,
+				EC1C1DC7255711CE0053271A /* MyPostsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -212,9 +220,10 @@
 		EC8C4A1D23B835E900C0D208 /* Global Config */ = {
 			isa = PBXGroup;
 			children = (
-				EC8C4A1E23B835FE00C0D208 /* GlobalColors.swift */,
+				EC8C4A1E23B835FE00C0D208 /* GlobalColor.swift */,
 				ECE05CDE23B83A20005974C4 /* GlobalKeys.plist */,
 				EC2C7A632415F0DF0062B790 /* GlobalStrings.swift */,
+				ECE59C2C2557515000EAD4B7 /* GlobalTheme.swift */,
 			);
 			path = "Global Config";
 			sourceTree = "<group>";
@@ -284,6 +293,7 @@
 				EC549DA0242598BA003CAF0A /* MainViewController.xib in Resources */,
 				EC385D7023B82CD800EFFD76 /* Assets.xcassets in Resources */,
 				EC2399E324677B6B006F5FCC /* BubbleCell.xib in Resources */,
+				ECE59C2A25574EB900EAD4B7 /* MyPostsViewController.xib in Resources */,
 				EC79A28F2427396200E42D89 /* LaunchScreen.storyboard in Resources */,
 				EC20805923B83BE70074B9C2 /* GoogleService-Info.plist in Resources */,
 				ECE05CDF23B83A20005974C4 /* GlobalKeys.plist in Resources */,
@@ -357,8 +367,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECE59C2D2557515000EAD4B7 /* GlobalTheme.swift in Sources */,
 				EC05AD8A23B85D0D006A8473 /* FirebaseService.swift in Sources */,
-				EC8C4A1F23B835FE00C0D208 /* GlobalColors.swift in Sources */,
+				EC8C4A1F23B835FE00C0D208 /* GlobalColor.swift in Sources */,
 				EC70B45F2464CDDC005E3C76 /* UserManager.swift in Sources */,
 				EC385D6B23B82CD600EFFD76 /* MainViewController.swift in Sources */,
 				EC70B4612464CE12005E3C76 /* FormatterUtils.swift in Sources */,
@@ -374,6 +385,7 @@
 				EC2399E5246786DC006F5FCC /* UpdateDelegate.swift in Sources */,
 				EC385D6923B82CD600EFFD76 /* SceneDelegate.swift in Sources */,
 				EC70B45B2464CD5B005E3C76 /* LocationService.swift in Sources */,
+				EC1C1DC8255711CE0053271A /* MyPostsViewController.swift in Sources */,
 				ECFEB65224AAF55D005471DD /* GCTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

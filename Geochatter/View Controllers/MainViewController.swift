@@ -21,7 +21,6 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = GlobalColors.appBackgroundColor
 
         firebaseService.delegate = self
         bubbleManager.delegate = self
@@ -95,7 +94,6 @@ extension MainViewController: MKMapViewDelegate {
 // MARK: - UITableViewDelegate
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     private func setUpTableView() {
-        chatTableView.separatorColor = GlobalColors.appSeparatorColor
         chatTableView.delegate = self
         chatTableView.dataSource = self
         chatTableView.register(UINib(nibName: BubbleCell.nibName, bundle: nil),

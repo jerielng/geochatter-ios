@@ -20,6 +20,5 @@ class GCNavigationController: UINavigationController {
 
     func setupNavigationBar() {
         navigationBar.isTranslucent = false
-        navigationBar.barTintColor = GlobalColors.navBarColor
     }
 }
