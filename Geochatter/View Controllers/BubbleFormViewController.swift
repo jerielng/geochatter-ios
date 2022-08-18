@@ -16,6 +16,7 @@ class BubbleFormViewController: UIViewController {
 
     var imagePickerController: UIImagePickerController!
 
+    private var bubbleFormViewModel = BubbleFormViewModel()
     private var hasTextViewBeenEdited: Bool = false
 
     override func viewDidLoad() {
@@ -71,7 +72,7 @@ class BubbleFormViewController: UIViewController {
     @objc
     private func postButtonClicked() {
         guard let bubbleText = bubbleEntryTextView.text else { return }
-        BubbleManager.sharedInstance.createNewBubble(with: bubbleText)
+        bubbleFormViewModel.createNewBubble(from: bubbleText)
         dismiss(animated: true, completion: nil)
     }
 

@@ -13,7 +13,7 @@ import MapKit
 class MainViewController: UIViewController {
     @IBOutlet weak var chatTableView: UITableView!
     @IBOutlet weak var mapView: MKMapView!
-
+    
     private let bubbleManager = BubbleManager.sharedInstance
     private let userManager = UserManager.sharedInstance
     private let locationService = LocationService.sharedInstance
@@ -92,10 +92,15 @@ extension MainViewController: MKMapViewDelegate {
 }
 
 // MARK: - UITableViewDelegate
-extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+extension MainViewController {
     private func setUpTableView() {
-        chatTableView.delegate = self
-        chatTableView.dataSource = self
+        let dataSource = UITableViewDiffableDataSource<Int,Bubble>(tableView: chatTableView) { [weak self] (tableView: UITableView, indexPath: IndexPath, bubble: Bubble) -> UITableViewCell? in
+            let cell = tableView.dequeueReusableCell(withIdentifier: BubbleCell.reuseIdentifier) as! BubbleCell
+            cell.authorLabel.text = self?.bubbleManager.getCurrentBubbles()[indexPath.row].authorId
+            cell.chatterLabel.text = self?.bubbleManager.getCurrentBubbles()[indexPath.row].chatterText
+            return cell
+        }
+        chatTableView.dataSource = dataSource
         chatTableView.register(UINib(nibName: BubbleCell.nibName, bundle: nil),
                                forCellReuseIdentifier: BubbleCell.reuseIdentifier)
         chatTableView.insetsContentViewsToSafeArea = true
@@ -107,13 +112,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bubbleManager.getCurrentBubbles().count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: BubbleCell.reuseIdentifier) as! BubbleCell
-        cell.authorLabel.text = bubbleManager.getCurrentBubbles()[indexPath.row].authorId
-        cell.chatterLabel.text = bubbleManager.getCurrentBubbles()[indexPath.row].chatterText
-        return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

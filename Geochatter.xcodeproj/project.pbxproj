@@ -24,6 +24,7 @@
 		EC385D6923B82CD600EFFD76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC385D6823B82CD600EFFD76 /* SceneDelegate.swift */; };
 		EC385D6B23B82CD600EFFD76 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC385D6A23B82CD600EFFD76 /* MainViewController.swift */; };
 		EC385D7023B82CD800EFFD76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC385D6F23B82CD800EFFD76 /* Assets.xcassets */; };
+		EC53A043257F423200D7C301 /* BubbleFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC53A042257F423200D7C301 /* BubbleFormViewModel.swift */; };
 		EC53FC25246BAD9100EF4607 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC53FC24246BAD9100EF4607 /* MapKit.framework */; };
 		EC549D9E242598AB003CAF0A /* BubbleFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC549D9D242598AB003CAF0A /* BubbleFormViewController.xib */; };
 		EC549DA0242598BA003CAF0A /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC549D9F242598BA003CAF0A /* MainViewController.xib */; };
@@ -61,6 +62,7 @@
 		EC385D6A23B82CD600EFFD76 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EC385D6F23B82CD800EFFD76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC385D7423B82CD800EFFD76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC53A042257F423200D7C301 /* BubbleFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleFormViewModel.swift; sourceTree = "<group>"; };
 		EC53FC24246BAD9100EF4607 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EC549D9D242598AB003CAF0A /* BubbleFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BubbleFormViewController.xib; sourceTree = "<group>"; };
 		EC549D9F242598BA003CAF0A /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
@@ -118,13 +120,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		EC1C1D9C25570C410053271A /* View Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View Models";
-			sourceTree = "<group>";
-		};
 		EC2BC38D2416037800F1269B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,10 +163,18 @@
 				EC05AD8623B85AFE006A8473 /* Models */,
 				EC2BC38D2416037800F1269B /* Utilities */,
 				EC8C4A1B23B8310500C0D208 /* View Controllers */,
-				EC1C1D9C25570C410053271A /* View Models */,
+				EC53A041257F422200D7C301 /* View Models */,
 				EC8C4A1C23B8310D00C0D208 /* Views */,
 			);
 			path = Geochatter;
+			sourceTree = "<group>";
+		};
+		EC53A041257F422200D7C301 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				EC53A042257F423200D7C301 /* BubbleFormViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 		EC549D9C24259877003CAF0A /* Layouts */ = {
@@ -381,6 +384,7 @@
 				EC1467F0240A1756006B350D /* BubbleCell.swift in Sources */,
 				EC2BC38F2416038C00F1269B /* BubbleManager.swift in Sources */,
 				EC1467EE240A164D006B350D /* BubbleAuthor.swift in Sources */,
+				EC53A043257F423200D7C301 /* BubbleFormViewModel.swift in Sources */,
 				ECDAD904246B90900074B5E9 /* LoginViewController.swift in Sources */,
 				EC2399E5246786DC006F5FCC /* UpdateDelegate.swift in Sources */,
 				EC385D6923B82CD600EFFD76 /* SceneDelegate.swift in Sources */,
